@@ -3524,7 +3524,7 @@ header.header-fixed .video-play-button.theme:after {
 }
 
 .banner-style-one {
-	padding-top: 150px;
+	/*padding-top: 150px;*/
 }
 
 .banner-style-one .info {
@@ -4967,14 +4967,14 @@ ul.biography-table li p {
 }
 
 .education-table {
-	display: grid;
+	/*display: grid;*/
 	grid-template-columns: 1fr 1fr;
 	grid-column-gap: 60px;
 	grid-row-gap: 40px;
 }
 
 .education-table p {
-	margin: 0;
+	margin-bottom: 15px;
 }
 
 .education-table span {
@@ -5632,9 +5632,16 @@ ul.biography-table li p {
 }
 
 .contact-info-list:nth-child(3) i {
-	background: #FEC447;
+	background: #018a01;
 }
 
+.contact-info-list:nth-child(4) i {
+	background: #0086d2;
+}
+
+.contact-info-list:nth-child(5) i {
+	background: #FEC447;
+}
 .contact-content .form-box {
 	padding: 60px;
 	background: rgba(255, 255, 255, 0.5);
@@ -5787,7 +5794,7 @@ footer p {
 }
 
 footer {
-	padding: 50px 0;
+	padding: 25px 0;
 }
 
 /* Error */

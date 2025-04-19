@@ -1,4 +1,9 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+mail("wahajamin17@gmail.com", "Test", "This is a test message", "From: test@yourdomain.com");
+echo "Sent";
 
 if(!$_POST) exit;
 
@@ -42,7 +47,7 @@ if(get_magic_quotes_gpc()) {
 // Example $address = "joe.doe@yourdomain.com";
 
 //$address = "example@themeforest.net";
-$address = "support@validthemes.live";
+$address = "wahajamin17@gmail.com";
 
 
 // Configuration option.
@@ -50,8 +55,7 @@ $address = "support@validthemes.live";
 
 // Example, $e_subject = '$name . ' has contacted you via Your Website.';
 
-$e_subject = 'Contact Form';
-
+$e_subject = "New Contact Submission from $name";
 
 // Configuration option.
 // You can change this if you feel that you need to.
@@ -63,7 +67,8 @@ $e_reply = "You can contact $name via email, $email";
 
 $msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
 
-$headers = "From: $email" . PHP_EOL;
+$headers = "From: Website Contact <no-reply@wahajamin.com>" . PHP_EOL;
+//$headers = "From: $email" . PHP_EOL;
 $headers .= "Reply-To: $email" . PHP_EOL;
 $headers .= "MIME-Version: 1.0" . PHP_EOL;
 $headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;

@@ -29,6 +29,10 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <!-- ========== End Stylesheet ========== -->
 
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
     <style>
         .pricing-style-one{
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -36,6 +40,46 @@
         }
         sup {
             top: -.2rem;
+        }
+        .pricing-style-one {
+            margin: 15px;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .owl-carousel .owl-nav {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .filter-btn {
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background-color: #ff014f;
+            color: white;
+            border-color: #ff014f;
+        }
+
+        .filter-btn.active {
+            background-color: #ff014f;
+            color: white;
+            border-color: #ff014f;
+        }
+
+        .text-center.mb-4 {
+            display: flex;
+            justify-content: left;
+            flex-wrap: wrap;
+            gap: 10px;
         }
     </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -51,46 +95,49 @@
 
     <!-- Start Preloader 
     ============================================= -->
-<!--    <div id="preloader">-->
-<!--        <div id="ambrox-preloader" class="ambrox-preloader">-->
-<!--            <div class="animation-preloader">-->
-<!--                <div class="spinner"></div>-->
-<!--                <div class="txt-loading">-->
-<!--                    <span data-text-preloader="W" class="letters-loading">-->
-<!--                        W-->
+    <div id="preloader">
+        <div id="ambrox-preloader" class="ambrox-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text-preloader="W" class="letters-loading">
+                        W
+                    </span>
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="H" class="letters-loading">
+                        H
+                    </span>
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="J" class="letters-loading">
+                        J
+                    </span>
+<!--                    <span data-text-preloader="X" class="letters-loading">-->
+<!--                        X-->
 <!--                    </span>-->
-<!--                    <span data-text-preloader="A" class="letters-loading">-->
-<!--                        A-->
-<!--                    </span>-->
-<!--                    <span data-text-preloader="H" class="letters-loading">-->
-<!--                        H-->
-<!--                    </span>-->
-<!--                    <span data-text-preloader="A" class="letters-loading">-->
-<!--                        A-->
-<!--                    </span>-->
-<!--                    <span data-text-preloader="J" class="letters-loading">-->
-<!--                        J-->
-<!--                    </span>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="loader">-->
-<!--                <div class="row">-->
-<!--                    <div class="col-3 loader-section section-left">-->
-<!--                        <div class="bg"></div>-->
-<!--                    </div>-->
-<!--                    <div class="col-3 loader-section section-left">-->
-<!--                        <div class="bg"></div>-->
-<!--                    </div>-->
-<!--                    <div class="col-3 loader-section section-right">-->
-<!--                        <div class="bg"></div>-->
-<!--                    </div>-->
-<!--                    <div class="col-3 loader-section section-right">-->
-<!--                        <div class="bg"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+                </div>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End Preloader -->
 
 
@@ -129,14 +176,17 @@
                         <li>
                             <a class="smooth-menu" href="#services">services</a>
                         </li>
-                        <li>
-                            <a class="smooth-menu" href="#portfolio">portfolio</a>
-                        </li>
+<!--                        <li>-->
+<!--                            <a class="smooth-menu" href="#portfolio">portfolio</a>-->
+<!--                        </li>-->
                         <li>
                             <a class="smooth-menu" href="#about">about</a>
                         </li>
                         <li>
                             <a class="smooth-menu" href="#resume">resume</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#pricing">pricing</a>
                         </li>
                         <li>
                             <a class="smooth-menu" href="#contact">contact</a>
@@ -175,12 +225,12 @@
                             <div class="menu-name">Services</div>
                         </a>
                     </li>
-                    <li>
-                        <a class="smooth-menu" href="#portfolio">
-                            <i class="fas fa-briefcase"></i>
-                            <div class="menu-name">Portfolio</div>
-                        </a>
-                    </li>
+<!--                    <li>-->
+<!--                        <a class="smooth-menu" href="#portfolio">-->
+<!--                            <i class="fas fa-briefcase"></i>-->
+<!--                            <div class="menu-name">Portfolio</div>-->
+<!--                        </a>-->
+<!--                    </li>-->
                     <li>
                         <a class="smooth-menu" href="#about">
                             <i class="fas fa-user"></i>
@@ -191,6 +241,12 @@
                         <a class="smooth-menu" href="#resume">
                             <i class="fas fa-file-alt"></i>
                             <div class="menu-name">Resume</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="smooth-menu" href="#pricing">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <div class="menu-name">Pricing</div>
                         </a>
                     </li>
                     <li>
@@ -219,7 +275,7 @@
 
                     <div class="col-lg-6 info">
                         <h1 class="text-invisible">WELCOME</h1>
-                        <h2>Hey <img src="assets/img/shape/4.png" alt="Icon"> I'm <span>Wahaj</span></h2>
+                        <h2>Hello, <!--<img src="assets/img/shape/4.png" alt="Icon">--> I'm <span>Wahaj</span></h2>
                         <h3 class="title">
                             <span class="header-caption" id="page-top">
                                 <!-- type headline start-->
@@ -234,6 +290,11 @@
                                 <!-- type headline end -->
                             </span>
                         </h3>
+                        <p class="mt-3">Full-Stack Web Developer with 5+ years of experience in developing secure, scalable web
+                            applications using Laravel, PHP, and modern frontend frameworks. Skilled in crafting intuitive
+                            UIs, integrating real-time features, and delivering full-cycle development for industries like e-
+                            commerce, logistics, real estate, and SaaS. Known for clean code, performance optimization,
+                            and cross-functional team collaboration.</p>
                         <div class="button mt-55">
                             <a class="btn btn-md circle btn-dark" href="#resume">My Resume</a>
                         </div>
@@ -249,19 +310,24 @@
                 </div>
                 <div class="personal-social">
                     <ul>
+                        <li class="whatsapp">
+                            <a href="https://wa.me/923351809446?text=Hi%20Wahaj!%20I'm%20interested%20in%20working%20with%20you.%20Can%20you%20tell%20me%20more%20about%20your%20services?">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
                         <li class="facebook">
                             <a href="#">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
-                        <li class="linkedin">
-                            <a href="#">
-                                <i class="fab fa-linkedin"></i>
+                        <li class="instagram">
+                            <a href="https://www.instagram.com/wahaj_amin/">
+                                <i class="fab fa-instagram"></i>
                             </a>
                         </li>
-                        <li class="instagram">
-                            <a href="#">
-                                <i class="fab fa-instagram"></i>
+                        <li class="linkedin">
+                            <a href="https://linkedin.com/in/wahajamin">
+                                <i class="fab fa-linkedin"></i>
                             </a>
                         </li>
                     </ul>
@@ -286,168 +352,265 @@
                 </div>
             </div>
         </div>
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                <div class="service-style-one col-lg-4 col-md-6">-->
+<!--                    <div class="service-style-one-item">-->
+<!--                        <img src="assets/img/icon/1.png" alt="Icon">-->
+<!--                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Website Design</a></h4>-->
+<!--                        <p>-->
+<!--                            Explore the essence of my website design journey. Immerse yourself in a visual feast where creativity meets functionality. From intuitive user interfaces to visually stunning layouts, witness the artistry behind each meticulously designed website that elevates user experiences to new heights.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; End Single Item &ndash;&gt;-->
+<!--                &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                <div class="service-style-one col-lg-4 col-md-6">-->
+<!--                    <div class="service-style-one-item">-->
+<!--                        <img src="assets/img/icon/2.png" alt="Icon">-->
+<!--                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Web Development</a></h4>-->
+<!--                        <p>-->
+<!--                            Join me on a journey through the realm of web development. Uncover the code, creativity, and innovation that power my projects. From responsive designs to efficient functionality, witness the seamless fusion of technology and creativity that defines my approach to web development.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; End Single Item &ndash;&gt;-->
+<!--                &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                <div class="service-style-one col-lg-4 col-md-6">-->
+<!--                    <div class="service-style-one-item">-->
+<!--                        <img src="assets/img/icon/4.png" alt="Icon">-->
+<!--                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Graphic Design</a></h4>-->
+<!--                        <p>-->
+<!--                            Step into the world of graphic design, where creativity takes shape and colors come to life. Explore my portfolio to witness a fusion of art and communication, where each design tells a story. From eye-catching visuals to impactful branding, discover the transformative power of graphic design that captivates and communicates.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; End Single Item &ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+
         <div class="container">
             <div class="row">
-                <!-- Single Item -->
+                <!-- Full-Stack Development -->
                 <div class="service-style-one col-lg-4 col-md-6">
-                    <div class="service-style-one-item">
-                        <img src="assets/img/icon/1.png" alt="Icon">
-                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Website Design</a></h4>
+                    <div class="service-style-one-item text-center">
+                        <i class="fas fa-code fa-3x mb-3"></i>
+                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Full-Stack Development</a></h4>
                         <p>
-                            Explore the essence of my website design journey. Immerse yourself in a visual feast where creativity meets functionality. From intuitive user interfaces to visually stunning layouts, witness the artistry behind each meticulously designed website that elevates user experiences to new heights.
+                            From backend logic to frontend interfaces, I build complete web solutions using technologies like Laravel, Vue.js, and MySQL — delivering secure, scalable, and performance-optimized applications.
                         </p>
                     </div>
                 </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
+                <!-- Web Development -->
                 <div class="service-style-one col-lg-4 col-md-6">
-                    <div class="service-style-one-item">
-                        <img src="assets/img/icon/2.png" alt="Icon">
-                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Web Development</a></h4>
+                    <div class="service-style-one-item text-center">
+                        <i class="fas fa-laptop-code fa-3x mb-3"></i>
+                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Web Applications</a></h4>
                         <p>
-                            Join me on a journey through the realm of web development. Uncover the code, creativity, and innovation that power my projects. From responsive designs to efficient functionality, witness the seamless fusion of technology and creativity that defines my approach to web development.
+                            I specialize in building dynamic, responsive, and user-centric web applications — tailored to meet specific business needs and deliver seamless digital experiences.
                         </p>
                     </div>
                 </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
+
+                <!-- API Integration -->
                 <div class="service-style-one col-lg-4 col-md-6">
-                    <div class="service-style-one-item">
-                        <img src="assets/img/icon/4.png" alt="Icon">
+                    <div class="service-style-one-item text-center">
+                        <i class="fas fa-plug fa-3x mb-3"></i>
+                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">API Integration</a></h4>
+                        <p>
+                            I ensure smooth connectivity by integrating RESTful APIs for services like payments, notifications, and external apps — enhancing app functionality and user experience.
+                        </p>
+                    </div>
+                </div>
+                <!-- CMS & E-Commerce -->
+                <div class="service-style-one col-lg-4 col-md-6">
+                    <div class="service-style-one-item text-center">
+                        <i class="fas fa-store fa-3x mb-3"></i>
+                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">CMS & E-Commerce</a></h4>
+                        <p>
+                            Custom content management systems and scalable e-commerce platforms with intuitive admin panels and seamless user journeys — crafted for business growth.
+                        </p>
+                    </div>
+                </div>
+                <!-- Performance Optimization -->
+                <div class="service-style-one col-lg-4 col-md-6">
+                    <div class="service-style-one-item text-center">
+                        <i class="fas fa-tachometer-alt fa-3x mb-3"></i>
+                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Performance Optimization</a></h4>
+                        <p>
+                            I fine-tune websites and applications for peak speed, responsiveness, and load efficiency — ensuring top-tier performance across all browsers and devices.
+                        </p>
+                    </div>
+                </div>
+                <!-- Graphic Design -->
+                <div class="service-style-one col-lg-4 col-md-6">
+                    <div class="service-style-one-item text-center">
+                        <i class="fas fa-pencil-ruler fa-3x mb-3"></i>
                         <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Graphic Design</a></h4>
                         <p>
-                            Step into the world of graphic design, where creativity takes shape and colors come to life. Explore my portfolio to witness a fusion of art and communication, where each design tells a story. From eye-catching visuals to impactful branding, discover the transformative power of graphic design that captivates and communicates.
+                            Visual storytelling through creative design — I create brand assets, UI elements, and marketing visuals that are both aesthetic and effective in communication.
                         </p>
                     </div>
                 </div>
-                <!-- End Single Item -->
-            </div>
-        </div>
-        
-
-        <!-- Start Services Single Modal -->
-        <div class="modal fade" id="serviceSingleModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-                <div class="modal-content">
-                    
-                    <div class="modal-body">
-
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="services-single-content">
-                            <div class="thumb">
-                                <img src="assets/img/1500x700.png" alt="Thumb">
-                            </div>
-                            <h2>Best influencer marketing services</h2>
-                            <p>
-                                We denounce with righteous indige nation and dislike men who are so beguiled and demo realized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled data structures manages data in technology.
-                            </p>
-                            <div class="features mt-40 mt-xs-30 mb-30 mb-xs-20">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="content">
-                                            <h4>Included Services</h4>
-                                            <ul class="feature-list-item">
-                                                <li>Monthly SEO Task</li>
-                                                <li>24/7 Alltime Supporting</li>
-                                                <li>Turbo Boosting</li>
-                                                <li>Expert Team Members</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8 col-md-6 mt-xs-30">
-                                        <div class="content">
-                                            <h4>The Challange</h4>
-                                            <p>
-                                                Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias. consequatur aut perferendis doloribus asperiores repellat. Rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse have to be repudiated and annoyances accepted.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>What we do?</h4>
-                            <p>
-                                Nam libero tempore, cum soluta nobis est elig endi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repelle ndus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias. consequatur aut perferendis doloribus asperiores repellat. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.  pleasures have to be repudiated and annoyances accepted. 
-                            </p>
-    
-                            <div class="faq-style-one mt-40">
-                                <h3 class="mb-25">Common Question for this project</h3>
-                                <div class="accordion" id="faqAccordion">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                Where can I get analytics help?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p>
-                                                    Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingTwo">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                How much does data analytics costs?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p>
-                                                    Cennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingThree">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                What kind of data is needed for analysis?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p>
-                                                    Tennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="services-more mt-50">
-                                <h3>Popular Services</h3>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="item">
-                                            <i class="flaticon-development"></i>
-                                            <h4><a href="#">Speed Optimization</a></h4>
-                                            <p>
-                                                These cases are perfectly simple and easy to distinguish. In a free hour, when our power.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="item">
-                                            <i class="flaticon-layers"></i>
-                                            <h4><a href="#">Frondend Development</a></h4>
-                                            <p>
-                                                These cases are perfectly simple and easy to distinguish. In a free hour, when our power.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Server-Side Deployment -->
+                <div class="service-style-one col-lg-4 col-md-6">
+                    <div class="service-style-one-item text-center">
+                        <i class="fas fa-server fa-3x mb-3"></i>
+                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Server-Side Deployment</a></h4>
+                        <p>
+                            I handle live deployment, CI/CD pipelines, and server setups on platforms like DigitalOcean, Forge, and cPanel — ensuring reliable production environments.
+                        </p>
+                    </div>
+                </div>
+                <!-- SaaS Development -->
+                <div class="service-style-one col-lg-4 col-md-6">
+                    <div class="service-style-one-item text-center">
+                        <i class="fas fa-cloud fa-3x mb-3"></i>
+                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">SaaS Development</a></h4>
+                        <p>
+                            From subscription models to user management and billing integrations, I build robust SaaS applications that scale and solve real-world problems.
+                        </p>
+                    </div>
+                </div>
+                <!-- Custom Websites -->
+                <div class="service-style-one col-lg-4 col-md-6">
+                    <div class="service-style-one-item text-center">
+                        <i class="fas fa-globe fa-3x mb-3"></i>
+                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Custom Websites</a></h4>
+                        <p>
+                            Whether personal, business, or portfolio — I develop tailored websites with responsive design, modern visuals, and full control over functionality and content.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+        <!-- Start Services Single Modal -->
+<!--        <div class="modal fade" id="serviceSingleModal" tabindex="-1" aria-hidden="true">-->
+<!--            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">-->
+<!--                <div class="modal-content">-->
+<!--                    -->
+<!--                    <div class="modal-body">-->
+
+<!--                        <div class="modal-header">-->
+<!--                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--                        </div>-->
+
+<!--                        <div class="services-single-content">-->
+<!--                            <div class="thumb">-->
+<!--                                <img src="assets/img/1500x700.png" alt="Thumb">-->
+<!--                            </div>-->
+<!--                            <h2>Best influencer marketing services</h2>-->
+<!--                            <p>-->
+<!--                                We denounce with righteous indige nation and dislike men who are so beguiled and demo realized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled data structures manages data in technology.-->
+<!--                            </p>-->
+<!--                            <div class="features mt-40 mt-xs-30 mb-30 mb-xs-20">-->
+<!--                                <div class="row">-->
+<!--                                    <div class="col-lg-4 col-md-6">-->
+<!--                                        <div class="content">-->
+<!--                                            <h4>Included Services</h4>-->
+<!--                                            <ul class="feature-list-item">-->
+<!--                                                <li>Monthly SEO Task</li>-->
+<!--                                                <li>24/7 Alltime Supporting</li>-->
+<!--                                                <li>Turbo Boosting</li>-->
+<!--                                                <li>Expert Team Members</li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-8 col-md-6 mt-xs-30">-->
+<!--                                        <div class="content">-->
+<!--                                            <h4>The Challange</h4>-->
+<!--                                            <p>-->
+<!--                                                Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias. consequatur aut perferendis doloribus asperiores repellat. Rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse have to be repudiated and annoyances accepted.-->
+<!--                                            </p>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <h4>What we do?</h4>-->
+<!--                            <p>-->
+<!--                                Nam libero tempore, cum soluta nobis est elig endi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repelle ndus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias. consequatur aut perferendis doloribus asperiores repellat. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.  pleasures have to be repudiated and annoyances accepted. -->
+<!--                            </p>-->
+<!--    -->
+<!--                            <div class="faq-style-one mt-40">-->
+<!--                                <h3 class="mb-25">Common Question for this project</h3>-->
+<!--                                <div class="accordion" id="faqAccordion">-->
+<!--                                    <div class="accordion-item">-->
+<!--                                        <h2 class="accordion-header" id="headingOne">-->
+<!--                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+<!--                                                Where can I get analytics help?-->
+<!--                                            </button>-->
+<!--                                        </h2>-->
+<!--                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">-->
+<!--                                            <div class="accordion-body">-->
+<!--                                                <p>-->
+<!--                                                    Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.-->
+<!--                                                </p>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="accordion-item">-->
+<!--                                        <h2 class="accordion-header" id="headingTwo">-->
+<!--                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">-->
+<!--                                                How much does data analytics costs?-->
+<!--                                            </button>-->
+<!--                                        </h2>-->
+<!--                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">-->
+<!--                                            <div class="accordion-body">-->
+<!--                                                <p>-->
+<!--                                                    Cennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.-->
+<!--                                                </p>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="accordion-item">-->
+<!--                                        <h2 class="accordion-header" id="headingThree">-->
+<!--                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">-->
+<!--                                                What kind of data is needed for analysis?-->
+<!--                                            </button>-->
+<!--                                        </h2>-->
+<!--                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">-->
+<!--                                            <div class="accordion-body">-->
+<!--                                                <p>-->
+<!--                                                    Tennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.-->
+<!--                                                </p>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--    -->
+<!--                            <div class="services-more mt-50">-->
+<!--                                <h3>Popular Services</h3>-->
+<!--                                <div class="row">-->
+<!--                                    <div class="col-md-6">-->
+<!--                                        <div class="item">-->
+<!--                                            <i class="flaticon-development"></i>-->
+<!--                                            <h4><a href="#">Speed Optimization</a></h4>-->
+<!--                                            <p>-->
+<!--                                                These cases are perfectly simple and easy to distinguish. In a free hour, when our power.-->
+<!--                                            </p>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-md-6">-->
+<!--                                        <div class="item">-->
+<!--                                            <i class="flaticon-layers"></i>-->
+<!--                                            <h4><a href="#">Frondend Development</a></h4>-->
+<!--                                            <p>-->
+<!--                                                These cases are perfectly simple and easy to distinguish. In a free hour, when our power.-->
+<!--                                            </p>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <!-- End Services Single Modal -->
 
     </div>
@@ -455,325 +618,444 @@
 
     <!-- Start Portfolio 
     ============================================= -->
-    <div id="portfolio" class="portfolio-style-six-area default-padding-top">
-        <div class="shape-animated-right">
-            <img src="assets/img/shape/1.webp" alt="Shape">
-        </div>
-        
-        <div class="container">
-            <div class="heading-left">
-                <div class="row align-center">
-                    <div class="col-lg-5">
-                        <div class="left-info">
-                            <h5 class="sub-title">Recent Work</h5>
-                            <h2 class="title">Look at my portfolio and <br> give me your feedback</h2>
-                            <div class="heading-shape">
-                                <img src="assets/img/shape/10.png" alt="Shape">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 offset-lg-1">
-                        <div class="right-info">
-                            <div class="fun-factor-default">
-                                <div class="fun-fact">
-                                    <div class="counter">
-                                        <div class="timer" data-to="35" data-speed="2000">35</div>
-                                        <div class="operator"></div>
-                                    </div>
-                                    <span class="medium">Completed Project</span>
-                                </div>
-                                <div class="fun-fact">
-                                    <div class="counter">
-                                        <div class="timer" data-to="98" data-speed="2000">98</div>
-                                        <div class="operator">%</div>
-                                    </div>
-                                    <span class="medium">Positive Rating</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 gallery-content mb--15">
-                    <div class="magnific-mix-gallery masonary">
-                        <div id="portfolio-grid" class="gallery-items colums-4">
+<!--    <div id="portfolio" class="portfolio-style-six-area default-padding-top">-->
+<!--        <div class="shape-animated-right">-->
+<!--            <img src="assets/img/shape/1.webp" alt="Shape">-->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="container">-->
+<!--            <div class="heading-left">-->
+<!--                <div class="row align-center">-->
+<!--                    <div class="col-lg-5">-->
+<!--                        <div class="left-info">-->
+<!--                            <h5 class="sub-title">Recent Projects</h5>-->
+<!--                            <h2 class="title">Explore My Portfolio <br> & Share Your Thoughts</h2>-->
+<!--                            <div class="heading-shape">-->
+<!--                                <img src="assets/img/shape/10.png" alt="Decorative Shape">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-6 offset-lg-1">-->
+<!--                        <div class="right-info">-->
+<!--                            <div class="fun-factor-default">-->
+<!--                                <div class="fun-fact">-->
+<!--                                    <div class="counter">-->
+<!--                                        <div class="timer" data-to="35" data-speed="2000">35</div>-->
+<!--                                        <div class="operator">+</div>-->
+<!--                                    </div>-->
+<!--                                    <span class="medium">Projects Completed</span>-->
+<!--                                </div>-->
+<!--                                <div class="fun-fact">-->
+<!--                                    <div class="counter">-->
+<!--                                        <div class="timer" data-to="98" data-speed="2000">98</div>-->
+<!--                                        <div class="operator">%</div>-->
+<!--                                    </div>-->
+<!--                                    <span class="medium">Client Satisfaction</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (16).jpg" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Development</span>
-                                            <h5><a href="https://ecommercefuture.org/" target="_blank">Ecommerce Future</a></h5>
-                                        </div>
-                                        <a href="https://ecommercefuture.org/" target="_blank"><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (16).jpg" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Development</span>
-                                            <h5><a href="https://poultryrates.com/" target="_blank">Poultry Rates</a></h5>
-                                        </div>
-                                        <a href="https://poultryrates.com/" target="_blank"><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (16).jpg" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Development</span>
-                                            <h5><a href="https://pickup4me.co.uk/" target="_blank">Pickup4me</a></h5>
-                                        </div>
-                                        <a href="https://pickup4me.co.uk/" target="_blank"><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (16).jpg" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Development</span>
-                                            <h5><a href="https://midaal.com/" target="_blank">Midaal</a></h5>
-                                        </div>
-                                        <a href="https://midaal.com/" target="_blank"><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
+<!--    <div class="container">-->
 
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (1).png" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Graphic Designing</span>
-                                            <h5>Poster Design</h5>
-                                        </div>
-                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
+<!--        <div class="text-left mb-5">-->
+<!--            <button class="filter-btn active" data-filter="all">All</button>-->
+<!--            <button class="filter-btn" data-filter="development">Development</button>-->
+<!--            <button class="filter-btn" data-filter="graphic">Graphic Designing</button>-->
+<!--        </div>-->
 
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (2).jpg" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Graphic Designing</span>
-                                            <h5>Poster Design</h5>
-                                        </div>
-                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
+<!--        <div class="row">-->
+<!--                <div class="col-md-12 gallery-content mb&#45;&#45;15">-->
+<!--                    <div class="magnific-mix-gallery masonary">-->
+<!--                        <div id="portfolio-grid" class="gallery-items colums-4">-->
 
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (3).jpg" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Graphic Designing</span>
-                                            <h5>Poster Design</h5>
-                                        </div>
-                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (7).jpg" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Graphic Designing</span>
-                                            <h5>Poster Design</h5>
-                                        </div>
-                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (5).jpg" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Graphic Designing</span>
-                                            <h5>Poster Design</h5>
-                                        </div>
-                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (13).jpg" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Graphic Designing</span>
-                                            <h5>Poster Design</h5>
-                                        </div>
-                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (14).jpg" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Graphic Designing</span>
-                                            <h5>Poster Design</h5>
-                                        </div>
-                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="pf-item">
-                                <div class="overlay-content">
-                                    <img src="assets/img/portfolio/img (15).jpg" alt="thumb">
-                                    <div class="content">
-                                        <div class="title">
-                                            <span>Graphic Designing</span>
-                                            <h5>Poster Design</h5>
-                                        </div>
-                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                                 <div class="pf-item development"-->
+<!--                                 data-bs-toggle="modal"-->
+<!--                                 data-bs-target="#projectSingleModal"-->
+<!--                                 data-title="Knarkz Eye"-->
+<!--                                 data-sub-title="Guard Management System"-->
+<!--                                 data-client="Knarkz Solution Ltd."-->
+<!--                                 data-type="Saas Development"-->
+<!--                                 data-date="-"-->
+<!--                                 data-address="Knarkz Solution Ltd."-->
+<!--                                 data-description="Knarkz Eye is a SaaS-based guard management platform developed under my technical leadership at-->
+<!--Knarkz Solutions using Laravel and modern web technologies. The system enables businesses to subscribe-->
+<!--to security services, enroll and assign registered guards to their sites, and manage operations through-->
+<!--real-time tracking, calendar-based scheduling, and detailed reporting. With features like site creation,-->
+<!--user role management, and guard performance monitoring, Knarkz Eye streamlines security workforce-->
+<!--management for companies requiring on-site protection"-->
+<!--                                 data-image="assets/img/portfolio/kanrkzeye.jpg">-->
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/kanrkzeye.jpg" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div style="line-height: 18px!important;" class="title">-->
+<!--                                            <h5>Knarkz Eye</h5>-->
+<!--                                            <span >Guard Management System</span>-->
+<!--                                        </div>-->
+<!--                                        <a><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                                 <div class="pf-item development"-->
+<!--                                 data-bs-toggle="modal"-->
+<!--                                 data-bs-target="#projectSingleModal"-->
+<!--                                 data-title="Ecommerce Future"-->
+<!--                                 data-client="Ecommerce Org"-->
+<!--                                 data-type="Website Development"-->
+<!--                                 data-date="12 March, 2024"-->
+<!--                                 data-address="Remote"-->
+<!--                                 data-description="Ecommerce Future is a platform..."-->
+<!--                                 data-image="assets/img/portfolio/img (16).jpg">-->
 
-        <!-- Start Projects Single Modal -->
-        <div class="modal fade" id="projectSingleModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-                <div class="modal-content">
-                    <div class="modal-body">
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/img (16).jpg" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div class="title">-->
+<!--                                            <span>Development</span>-->
+<!--                                            <h5>Poultry Rates</h5>-->
+<!--                                        </div>-->
+<!--                                        <a href="https://poultryrates.com/" target="_blank"><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                                 <div class="pf-item development"-->
+<!--                                 data-bs-toggle="modal"-->
+<!--                                 data-bs-target="#projectSingleModal"-->
+<!--                                 data-title="Ecommerce Future"-->
+<!--                                 data-client="Ecommerce Org"-->
+<!--                                 data-type="Website Development"-->
+<!--                                 data-date="12 March, 2024"-->
+<!--                                 data-address="Remote"-->
+<!--                                 data-description="Ecommerce Future is a platform..."-->
+<!--                                 data-image="assets/img/portfolio/img (16).jpg">-->
 
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/img (16).jpg" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div class="title">-->
+<!--                                            <span>Development</span>-->
+<!--                                            <h5>Pickup4me</h5>-->
+<!--                                        </div>-->
+<!--                                        <a href="https://pickup4me.co.uk/" target="_blank"><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                                 <div class="pf-item development"-->
+<!--                                 data-bs-toggle="modal"-->
+<!--                                 data-bs-target="#projectSingleModal"-->
+<!--                                 data-title="Ecommerce Future"-->
+<!--                                 data-client="Ecommerce Org"-->
+<!--                                 data-type="Website Development"-->
+<!--                                 data-date="12 March, 2024"-->
+<!--                                 data-address="Remote"-->
+<!--                                 data-description="Ecommerce Future is a platform..."-->
+<!--                                 data-image="assets/img/portfolio/img (16).jpg">-->
 
-                        <div class="project-details-items">
-                            <div class="project-thumb">
-                                <img src="assets/img/1500x700.png" alt="Thumb">
-                            </div>
-                            <div class="top-info">
-                                <div class="row">
-                                    <div class="col-xl-12 left-info">
-                                        <div class="project-info mt-md-50 mt-xs-40 mb-40">
-                                            <div class="content">
-                                                <ul class="project-basic-info">
-                                                    <li>
-                                                        Client <span>validthemes</span>
-                                                    </li>
-                                                    <li>
-                                                        Project Type <span>Website Growth</span>
-                                                    </li>
-                                                    <li>
-                                                        Date <span>25 February, 2023</span>
-                                                    </li>
-                                                    <li>
-                                                        Address <span>New York United state</span>
-                                                    </li>
-                                                </ul>
-                                                <ul class="social">
-                                                    <li>
-                                                        <h4>Share:</h4>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <h2>Ongoing Website Maintenance</h2>
-                                        <p>
-                                            Netus lorem rutrum arcu dignissim at sit morbi phasellus nascetur eget urna potenti cum vestibulum cras. Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra felis sapien varius quisque class convallis praesent est sollicitudin donec nulla venenatis, cursus fermentum netus posuere sociis porta risus habitant malesuada nulla habitasse hymenaeos. Viverra curabitur nisi vel sollicitudin dictum natoqu. Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra felis sapien varius quisque class convallis praesent est sollicitudin donec nulla venenatis, cursus fermentum netus posuere sociis porta risus habitant malesuada nulla habitasse hymenaeos. Viverra curabitur nisi vel sollicitudin dictum.
-                                        </p>
-                                        <ul class="check-list mt-40">
-                                            <li>
-                                                <h4>WordPress Support</h4>
-                                                <p>
-                                                    Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <h4>Social Media Management</h4>
-                                                <p>
-                                                    Energy nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="main-content mt-40">
-                                
-                                <p>
-                                    Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument out reasonably. Again keeps at no meant stuff. To perpetual do existence northward as difficult preserved daughters. Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet her.  Facilisis inceptos nec, potenti nostra aenean lacinia varius semper ant nullam nulla primis placerat facilisis. Netus lorem rutrum arcu dignissim at sit morbi phasellus nascetur eget urna potenti cum vestibulum cras. Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra felis sapien varius quisque class convallis praesent est sollicitudin donec nulla venenatis, cursus fermentum netus posuere sociis porta risus habitant malesuada nulla habitasse hymenaeos. Viverra curabitur nisi vel sollicitudin dictum natoque ante aenean elementum curae malesuada ullamcorper. vivamus nonummy nisl posuere rutrum
-                                </p>
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <img src="assets/img/800x600.png" alt="Thumb">
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <img src="assets/img/800x600.png" alt="Thumb">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Projects Single Modal -->
-    </div>
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/img (16).jpg" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div class="title">-->
+<!--                                            <span>Development</span>-->
+<!--                                            <h5>Midaal</h5>-->
+<!--                                        </div>-->
+<!--                                        <a href="https://midaal.com/" target="_blank"><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                            <div class="pf-item graphic">-->
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/img (1).png" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div class="title">-->
+<!--                                            <span>Graphic Designing</span>-->
+<!--                                            <h5>Poster Design</h5>-->
+<!--                                        </div>-->
+<!--                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                            <div class="pf-item graphic"-->
+<!--                            data-bs-toggle="modal"-->
+<!--                                 data-bs-target="#projectSingleModal"-->
+<!--                                 data-title="Ecommerce Future"-->
+<!--                                 data-client="Ecommerce Org"-->
+<!--                                 data-type="Website Development"-->
+<!--                                 data-date="12 March, 2024"-->
+<!--                                 data-address="Remote"-->
+<!--                                 data-description="Ecommerce Future is a platform..."-->
+<!--                                 data-image="assets/img/portfolio/img (16).jpg">-->
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/img (2).jpg" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div class="title">-->
+<!--                                            <span>Graphic Designing</span>-->
+<!--                                            <h5>Poster Design</h5>-->
+<!--                                        </div>-->
+<!--                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                            <div class="pf-item graphic"-->
+<!--                            data-bs-toggle="modal"-->
+<!--                                 data-bs-target="#projectSingleModal"-->
+<!--                                 data-title="Ecommerce Future"-->
+<!--                                 data-client="Ecommerce Org"-->
+<!--                                 data-type="Website Development"-->
+<!--                                 data-date="12 March, 2024"-->
+<!--                                 data-address="Remote"-->
+<!--                                 data-description="Ecommerce Future is a platform..."-->
+<!--                                 data-image="assets/img/portfolio/img (16).jpg">-->
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/img (3).jpg" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div class="title">-->
+<!--                                            <span>Graphic Designing</span>-->
+<!--                                            <h5>Poster Design</h5>-->
+<!--                                        </div>-->
+<!--                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                            <div class="pf-item graphic"-->
+<!--                            data-bs-toggle="modal"-->
+<!--                                 data-bs-target="#projectSingleModal"-->
+<!--                                 data-title="Ecommerce Future"-->
+<!--                                 data-client="Ecommerce Org"-->
+<!--                                 data-type="Website Development"-->
+<!--                                 data-date="12 March, 2024"-->
+<!--                                 data-address="Remote"-->
+<!--                                 data-description="Ecommerce Future is a platform..."-->
+<!--                                 data-image="assets/img/portfolio/img (16).jpg">-->
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/img (7).jpg" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div class="title">-->
+<!--                                            <span>Graphic Designing</span>-->
+<!--                                            <h5>Poster Design</h5>-->
+<!--                                        </div>-->
+<!--                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                            <div class="pf-item graphic"-->
+<!--                            data-bs-toggle="modal"-->
+<!--                                 data-bs-target="#projectSingleModal"-->
+<!--                                 data-title="Ecommerce Future"-->
+<!--                                 data-client="Ecommerce Org"-->
+<!--                                 data-type="Website Development"-->
+<!--                                 data-date="12 March, 2024"-->
+<!--                                 data-address="Remote"-->
+<!--                                 data-description="Ecommerce Future is a platform..."-->
+<!--                                 data-image="assets/img/portfolio/img (16).jpg">-->
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/img (5).jpg" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div class="title">-->
+<!--                                            <span>Graphic Designing</span>-->
+<!--                                            <h5>Poster Design</h5>-->
+<!--                                        </div>-->
+<!--                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                            <div class="pf-item graphic"-->
+<!--                            data-bs-toggle="modal"-->
+<!--                                 data-bs-target="#projectSingleModal"-->
+<!--                                 data-title="Ecommerce Future"-->
+<!--                                 data-client="Ecommerce Org"-->
+<!--                                 data-type="Website Development"-->
+<!--                                 data-date="12 March, 2024"-->
+<!--                                 data-address="Remote"-->
+<!--                                 data-description="Ecommerce Future is a platform..."-->
+<!--                                 data-image="assets/img/portfolio/img (16).jpg">-->
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/img (13).jpg" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div class="title">-->
+<!--                                            <span>Graphic Designing</span>-->
+<!--                                            <h5>Poster Design</h5>-->
+<!--                                        </div>-->
+<!--                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                            <div class="pf-item graphic"-->
+<!--                            data-bs-toggle="modal"-->
+<!--                                 data-bs-target="#projectSingleModal"-->
+<!--                                 data-title="Ecommerce Future"-->
+<!--                                 data-client="Ecommerce Org"-->
+<!--                                 data-type="Website Development"-->
+<!--                                 data-date="12 March, 2024"-->
+<!--                                 data-address="Remote"-->
+<!--                                 data-description="Ecommerce Future is a platform..."-->
+<!--                                 data-image="assets/img/portfolio/img (16).jpg">-->
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/img (14).jpg" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div class="title">-->
+<!--                                            <span>Graphic Designing</span>-->
+<!--                                            <h5>Poster Design</h5>-->
+<!--                                        </div>-->
+<!--                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+<!--                            &lt;!&ndash; Single Item &ndash;&gt;-->
+<!--                            <div class="pf-item graphic"-->
+<!--                            data-bs-toggle="modal"-->
+<!--                                 data-bs-target="#projectSingleModal"-->
+<!--                                 data-title="Ecommerce Future"-->
+<!--                                 data-client="Ecommerce Org"-->
+<!--                                 data-type="Website Development"-->
+<!--                                 data-date="12 March, 2024"-->
+<!--                                 data-address="Remote"-->
+<!--                                 data-description="Ecommerce Future is a platform..."-->
+<!--                                 data-image="assets/img/portfolio/img (16).jpg">-->
+<!--                                <div class="overlay-content">-->
+<!--                                    <img src="assets/img/portfolio/img (15).jpg" alt="thumb">-->
+<!--                                    <div class="content">-->
+<!--                                        <div class="title">-->
+<!--                                            <span>Graphic Designing</span>-->
+<!--                                            <h5>Poster Design</h5>-->
+<!--                                        </div>-->
+<!--                                        <a href="#" ><i class="fas fa-arrow-right"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; End Single Item &ndash;&gt;-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--&lt;!&ndash;        &lt;!&ndash; Start Projects Single Modal &ndash;&gt;&ndash;&gt;-->
+<!--        <div class="modal fade" id="projectSingleModal" tabindex="-1" aria-hidden="true">-->
+<!--            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">-->
+<!--                <div class="modal-content">-->
+<!--                    <div class="modal-body">-->
+
+<!--                        <div class="modal-header">-->
+<!--                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--                        </div>-->
+
+<!--                        <div class="project-details-items">-->
+
+<!--                            <div class="top-info">-->
+<!--                                <div class="row">-->
+<!--                                    <div class="col-xl-12 left-info">-->
+
+<!--                                        <h2>Ongoing Website Maintenance</h2>-->
+<!--                                        <h5></h5>-->
+<!--                                        <p class="mb-40">-->
+<!--                                            Netus lorem rutrum arcu dignissim at sit morbi phasellus nascetur eget urna potenti cum vestibulum cras. Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra felis sapien varius quisque class convallis praesent est sollicitudin donec nulla venenatis, cursus fermentum netus posuere sociis porta risus habitant malesuada nulla habitasse hymenaeos. Viverra curabitur nisi vel sollicitudin dictum natoqu. Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra felis sapien varius quisque class convallis praesent est sollicitudin donec nulla venenatis, cursus fermentum netus posuere sociis porta risus habitant malesuada nulla habitasse hymenaeos. Viverra curabitur nisi vel sollicitudin dictum.-->
+<!--                                        </p>-->
+<!--                                        <div class="project-info mt-md-50 mt-xs-40 ">-->
+<!--                                            <div class="content">-->
+<!--                                                <ul class="project-basic-info">-->
+<!--                                                    <li>-->
+<!--                                                        Client <span>validthemes</span>-->
+<!--                                                    </li>-->
+<!--                                                    <li>-->
+<!--                                                        Project Type <span>Website Growth</span>-->
+<!--                                                    </li>-->
+<!--                                                    <li>-->
+<!--                                                        Date <span>25 February, 2023</span>-->
+<!--                                                    </li>-->
+<!--                                                    <li>-->
+<!--                                                        Address <span>New York United state</span>-->
+<!--                                                    </li>-->
+<!--                                                </ul>-->
+<!--                                                &lt;!&ndash;                                                <ul class="social">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    <li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                        <h4>Share:</h4>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    </li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    <li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                        <a href="#"><i class="fab fa-facebook-f"></i></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    </li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    <li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                        <a href="#"><i class="fab fa-twitter"></i></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    </li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    <li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    </li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    <li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    </li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </ul>&ndash;&gt;-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--&lt;!&ndash;                                        <ul class="check-list mt-40">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <h4>WordPress Support</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra.&ndash;&gt;-->
+<!--&lt;!&ndash;                                                </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <h4>Social Media Management</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    Energy nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra.&ndash;&gt;-->
+<!--&lt;!&ndash;                                                </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </ul>&ndash;&gt;-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="project-thumb">-->
+<!--                                <img src="assets/img/1500x700.png" alt="Thumb">-->
+<!--                            </div>-->
+<!--&lt;!&ndash;                            <div class="main-content mt-40">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                <p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument out reasonably. Again keeps at no meant stuff. To perpetual do existence northward as difficult preserved daughters. Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet her.  Facilisis inceptos nec, potenti nostra aenean lacinia varius semper ant nullam nulla primis placerat facilisis. Netus lorem rutrum arcu dignissim at sit morbi phasellus nascetur eget urna potenti cum vestibulum cras. Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra felis sapien varius quisque class convallis praesent est sollicitudin donec nulla venenatis, cursus fermentum netus posuere sociis porta risus habitant malesuada nulla habitasse hymenaeos. Viverra curabitur nisi vel sollicitudin dictum natoque ante aenean elementum curae malesuada ullamcorper. vivamus nonummy nisl posuere rutrum&ndash;&gt;-->
+<!--&lt;!&ndash;                                </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="col-lg-6 col-md-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <img src="assets/img/800x600.png" alt="Thumb">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="col-lg-6 col-md-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <img src="assets/img/800x600.png" alt="Thumb">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--&lt;!&ndash;        &lt;!&ndash; End Projects Single Modal &ndash;&gt;&ndash;&gt;-->
+<!--    </div>-->
     <!-- End Portfolio -->
 
     <!-- Start About 
@@ -781,16 +1063,18 @@
     <div id="about" class="about-style-six-area default-padding-top">
         <div class="container">
             <div class="row align-center">
+                <!-- About Image -->
                 <div class="about-style-six col-lg-5">
                     <div class="thumb">
                         <img class="wow fadeInUp" src="assets/img/illustration/6.png" alt="Thumb">
                     </div>
                 </div>
+                <!-- About Content -->
                 <div class="about-style-six col-lg-6 offset-lg-1">
                     <h4 class="sub-title">About Me</h4>
-                    <h2 class="title">I can develop <br> that help people</h2>
+                    <h2 class="title">I build solutions <br> that empower people</h2>
                     <p>
-                        Hi, my name is <strong>Wahaj Amin</strong>, I am Versatile Laravel Developer and Graphic Designer with 4 Years of Experience: As a seasoned professional, I bring a wealth of expertise in Laravel development and graphic design to the table. Over the past four years, I have honed my skills, seamlessly blending the artistry of graphic design with the precision of Laravel development. Explore my portfolio to witness the synergy of creativity and functionality in each project, reflecting my commitment to delivering exceptional digital experiences.
+                        Hello! I'm <strong>Wahaj Amin</strong> — a versatile Laravel Developer and Graphic Designer with over 5 years of hands-on experience. I specialize in creating scalable, efficient web applications and visually compelling designs. My passion lies in merging creative visuals with technical precision, delivering high-performance solutions that are not only functional but beautifully designed. Each project in my portfolio reflects a deep understanding of user needs, modern frameworks, and a drive for excellence.
                     </p>
                     <div class="skill-list">
                         <ul>
@@ -799,25 +1083,45 @@
                                     <i class="fab fa-laravel"></i>
                                 </div>
                                 <div class="content">
-                                    <h4>Professional Laravel Developer</h4>
-                                    <span>Elevating Web Experiences with Laravel</span>
+                                    <h4>Expert Laravel Engineer</h4>
+                                    <span>Crafting high-performance, secure, and scalable backend solutions with modern Laravel architecture.</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="icon">
-                                    <i class="fas fa-photo-video"></i>
+                                    <i class="fas fa-pencil-alt"></i>
                                 </div>
                                 <div class="content">
-                                    <h4>Graphic Designer</h4>
-                                    <span>Visual Alchemy in Pixels</span>
+                                    <h4>Visual Brand Strategist</h4>
+                                    <span>Designing compelling graphics and brand identities that communicate value and spark engagement.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Database Architect</h4>
+                                    <span>Designing and optimizing MySQL/PostgreSQL databases to support data-driven applications with precision.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Deployment Specialist</h4>
+                                    <span>Managing CI/CD workflows and server deployments for seamless and stable production environments.</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+
     <!-- End About -->
 
     <!-- Start Resume 
@@ -833,21 +1137,23 @@
     
                         <div class="nav nav-tabs text-center resume-tab-navs" id="nav-tab" role="tablist">
     
-                            <button class="nav-link active" id="nav-id-1" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">
+
+                            <button class="nav-link active" id="nav-id-3" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="true">
+                                Experience <strong>03</strong>
+                            </button>
+
+                            <button class="nav-link" id="nav-id-2" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">
+                                Education <strong>02</strong>
+                            </button>
+
+                            <button class="nav-link " id="nav-id-1" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="false">
                                 Biography <strong>01</strong>
                             </button>
-                            <button class="nav-link" id="nav-id-2" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">
-                                Skills <strong>02</strong>
-                            </button>
-                            <button class="nav-link" id="nav-id-3" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">
-                                Education <strong>03</strong>
-                            </button>
-    
                         </div>
     
                         <div class="tab-content resume-tab-content" id="nav-tabContent">
                             <!-- Single Item -->
-                            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="nav-id-1">
+                            <div class="tab-pane fade " id="tab1" role="tabpanel" aria-labelledby="nav-id-1">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <ul class="biography-table">
@@ -858,21 +1164,15 @@
                                                 </p>
                                             </li>
                                             <li>
-                                                <h5>Birthday</h5>
-                                                <p>
-                                                    17 March, 2000
-                                                </p>
-                                            </li>
-                                            <li>
                                                 <h5>Age</h5>
                                                 <p>
-                                                    24
+                                                    25
                                                 </p>
                                             </li>
                                             <li>
                                                 <h5>Address</h5>
                                                 <p>
-                                                   Bait-ul-karim, 708/A, St#10, Multan
+                                                   Multan, Punjab Pakistan
                                                 </p>
                                             </li>
                                             <li>
@@ -902,113 +1202,143 @@
     
                             <!-- Single Item -->
                             <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="nav-id-2">
-                                <div class="row align-center">
-                                    <div class="col-lg-12">
-                                        <ul class="skill-table">
-                                            <li>
-                                                <div class="row align-center">
-                                                    <div class="col-lg-2">
-                                                        <div class="icon">
-                                                            <i class="fab fa-laravel"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-5">
-                                                        <h4>Object oriented programming</h4>
-                                                    </div>
-                                                    <div class="col-lg-5">
-                                                        <div class="progress-box">
-                                                            <h5>86%</h5>
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" data-width="86"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-
-                                            <li>
-                                                <div class="row align-center">
-                                                    <div class="col-lg-2">
-                                                        <div class="icon">
-                                                            <i class="fab fa-html5"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-5">
-                                                        <h4>Advance frontend development</h4>
-                                                    </div>
-                                                    <div class="col-lg-5">
-                                                        <div class="progress-box">
-                                                            <h5>92%</h5>
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" data-width="92"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-
-
-                                            <li>
-                                                <div class="row align-center">
-                                                    <div class="col-lg-2">
-                                                        <div class="icon">
-                                                            <i class="fab fa-react"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-5">
-                                                        <h4>Front-End with React</h4>
-                                                    </div>
-                                                    <div class="col-lg-5">
-                                                        <div class="progress-box">
-                                                            <h5>90%</h5>
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar" data-width="90"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-    
-                            <!-- Single Item -->
-                            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="nav-id-3">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <ul class="education-table">
                                             <li>
-                                                <h4>Matriculation</h4>
-                                                <h5>Nishat Boys High School Multan</h5>
-                                                <span>2016</span>
+                                                <h4>Graduation</h4>
+                                                <h5>University Of Punjab Lahore</h5>
+                                                <span>2020-2024</span>
                                             </li>
                                             <li>
                                                 <h4>Intermediate</h4>
                                                 <h5>Aspire College Multan</h5>
-                                                <span>2018</span>
+                                                <span>2017-2019</span>
+                                            </li>
+
+                                            <li>
+                                                <h4>Matriculation</h4>
+                                                <h5>Nishat Boys High School Multan</h5>
+                                                <span>2014-2016</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Single Item -->
+                            <div class="tab-pane fade show active" id="tab3" role="tabpanel" aria-labelledby="nav-id-3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <ul class="education-table">
+                                            <li>
+                                                <h4>Knarkz Solution Ltd.</h4>
+                                                <h5>Web Developer</h5>
+                                                <span>OCT 2022 – APR 2025</span>
+                                                <p>
+                                                    Served as a lead Web Developer managing the the full development lifecycle of complex Laravel-based systems for clients across logistics, e-commerce, real estate, and SaaS sectors. I was responsible for backend architecture, API development, and integrating real-time functionality using Web Sockets and Firebase Cloud Messaging. I collaborated with cross-functional teams to design secure, scalable web applications, and led Agile sprint planning, code reviews, and deployment using GitHub Actions. I also built dynamic reporting dashboards with Chart.js and Google Charts, optimized SQL queries, and integrated third-party services such as Stripe, SMS gateways, and ERPs. My leadership extended to mentoring junior team members and overseeing project timelines and technical direction.
+                                                </p>
                                             </li>
                                             <li>
-                                                <h4>Graduation</h4>
-                                                <h5>Punjab University Lahore</h5>
-                                                <span>2022</span>
+                                                <h4>Pakistan Medical Commision (PMC)</h4>
+                                                <h5>SQA Analyst & Associate Web Developer</h5>
+                                                <span>APR 2022 – OCT 2022</span>
+                                                <p>Contributed to the design, development, and quality assurance of a real-time online examination system used by thousands of students nationwide. Worked on multiple integrated portals (Admin, Student, Invigilator), implementing secure exam logic, randomized question generation, and real-time monitoring via WebSockets. Also supported QA processes including test planning, regression testing, and performance validation to ensure security, reliability, and compliance throughout the exam lifecycle.</p>
                                             </li>
-<!--                                            <li>-->
-<!--                                                <h4>Sr. Software Engineer</h4>-->
-<!--                                                <h5>Google Out Tech</h5>-->
-<!--                                                <span>2017 - Present</span>-->
-<!--                                                <p>-->
-<!--                                                    The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture. -->
-<!--                                                </p>-->
-<!--                                            </li>-->
+                                            <li>
+                                                <h4>Knarkz Solution Ltd.</h4>
+                                                <h5>Associate Web Developer</h5>
+                                                <span>FEB 2020 – APR 2022</span>
+                                                <p>
+                                                    Contributed to multiple Laravel-based projects including e-commerce platforms, CMS, and admin portals. Assisted in writing routes, controllers, and backend logic, and created responsive frontend components using Bootstrap, jQuery, and Ajax. Developed foundational skills in RESTful API integration, MySQL design, and Git version control. Played a key role in debugging, testing, and team collaboration.
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <h4>SOFTAGICS</h4>
+                                                <h5>Junior Web Developer (Internship)</h5>
+                                                <span>JUL 2019 – FEB 2020</span>
+                                                <p>I began my career as an intern at Softagics, where I was introduced to professional web development practices using Laravel. I supported the development team by assisting in building modules and UI components, creating basic web elements with HTML/CSS, and learning responsive design principles. I contributed to backend tasks using PHP and Laravel Blade, worked with MySQL databases, and performed basic debugging and testing under the guidance of senior developers. This role helped me gain a foundational understanding of team-based workflows, version control, and software development tools, which laid the groundwork for my future growth.</p>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <!-- End Single Item -->
-    
-    
+
+
+<!--                                <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="nav-id-4">-->
+<!--                                    <div class="row align-center">-->
+<!--                                        <div class="col-lg-12">-->
+<!--                                            <ul class="skill-table">-->
+<!--                                                <li>-->
+<!--                                                    <div class="row align-center">-->
+<!--                                                        <div class="col-lg-2">-->
+<!--                                                            <div class="icon">-->
+<!--                                                                <i class="fab fa-laravel"></i>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="col-lg-5">-->
+<!--                                                            <h4>Object oriented programming</h4>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="col-lg-5">-->
+<!--                                                            <div class="progress-box">-->
+<!--                                                                <h5>86%</h5>-->
+<!--                                                                <div class="progress">-->
+<!--                                                                    <div class="progress-bar" role="progressbar" data-width="86"></div>-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </li>-->
+
+<!--                                                <li>-->
+<!--                                                    <div class="row align-center">-->
+<!--                                                        <div class="col-lg-2">-->
+<!--                                                            <div class="icon">-->
+<!--                                                                <i class="fab fa-html5"></i>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="col-lg-5">-->
+<!--                                                            <h4>Advance frontend development</h4>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="col-lg-5">-->
+<!--                                                            <div class="progress-box">-->
+<!--                                                                <h5>92%</h5>-->
+<!--                                                                <div class="progress">-->
+<!--                                                                    <div class="progress-bar" role="progressbar" data-width="92"></div>-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </li>-->
+
+
+<!--                                                <li>-->
+<!--                                                    <div class="row align-center">-->
+<!--                                                        <div class="col-lg-2">-->
+<!--                                                            <div class="icon">-->
+<!--                                                                <i class="fab fa-react"></i>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="col-lg-5">-->
+<!--                                                            <h4>Front-End with React</h4>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="col-lg-5">-->
+<!--                                                            <div class="progress-box">-->
+<!--                                                                <h5>90%</h5>-->
+<!--                                                                <div class="progress">-->
+<!--                                                                    <div class="progress-bar" role="progressbar" data-width="90"></div>-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                             End Single Item -->
                         </div>
     
                     </div>
@@ -1027,8 +1357,8 @@
                     <div class="col-lg-12">
                         <div class="heading-left">
                             <div class="left-info">
-                                <h5 class="sub-title">Pricing</h5>
-                                <h2 class="title">The best pricing plans <br> to get your best</h2>
+                                <h5 class="sub-title">Affordable Packages</h5>
+                                <h2 class="title">Choose the Right Plan <br> for Your Next Project</h2>
                                 <div class="heading-shape">
                                     <img src="assets/img/shape/10.png" alt="Shape">
                                 </div>
@@ -1044,81 +1374,120 @@
         </div>
 
         <div class="container default-padding-top">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="pricing-style-one">
+            <div class="owl-carousel pricing-carousel owl-theme">
+                <!-- One Page Website -->
+                <div class="col-md-12">
+                    <div class="pricing-style-one" style="background: #f9f9f9;">
                         <div class="content">
-                            <h4>Laravel Website & Admin Panel</h4>
+                            <h4>One Page Website</h4>
                             <div class="row py-3">
                                 <div class="col-lg-6">
-                                    <h2><sup>$</sup>250</h2>
+                                    <h2><sup>$</sup>80</h2>
                                 </div>
                                 <div class="col-lg-6">
-                                    <i class="fab fa-laravel" style="position: initial;float: right"></i>
+                                    <i class="fas fa-globe" style="position: initial; float: right;"></i>
                                 </div>
                             </div>
                             <ul>
-                                <li>Up to 6 Pages</li>
-                                <li>Responsive Design</li>
-                                <li>Basic Admin Dashboard for Content Management</li>
-                                <li>Contact Form Integration</li>
-                                <li>Standard Support for 1 Month</li>
-                                <li>Hosting and Domain not included</li>
-                                <li>Estimated Timeline: 6 weeks</li>
-                                <li>2 Revisions Included</li>
+                                <li>Single Scroll Page</li>
+                                <li>Modern Design & Layout</li>
+                                <li>Mobile Responsive</li>
+                                <li>Contact Form Included</li>
+                                <li>Fast Delivery – 2 to 3 Days</li>
+                                <li>1 Revision Included</li>
+                                <li>Hosting/Domain not included</li>
                             </ul>
                             <a class="btn mt-25 btn-sm circle btn-dark" href="#contact">Order Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+
+                <!-- Static Website -->
+                <div class="col-md-12">
                     <div class="pricing-style-one" style="background: rgb(249, 240, 199)">
-                        <div class="content" style="width: 100%">
-                            <h4>Website Development</h4>
+                        <div class="content">
+                            <h4>Static Website</h4>
                             <div class="row py-3">
                                 <div class="col-lg-6">
-                                    <h2><sup>$</sup>100</h2>
+                                    <h2><sup>$</sup>150</h2>
                                 </div>
                                 <div class="col-lg-6">
-                                    <i class="fab fa-html5" style="position: initial;float: right"></i>
+                                    <i class="fab fa-html5" style="position: initial; float: right;"></i>
                                 </div>
                             </div>
-                            <ul style="min-height: 20rem;">
-                                <li>Up to 5 Pages</li>
-                                <li>Responsive Design</li>
-                                <li>Standard Support for 15 Days</li>
-                                <li>Hosting and Domain not included</li>
-                                <li>Estimated Timeline: 2 weeks</li>
-                                <li>1 Revisions Included</li>
+                            <ul>
+                                <li>Up to 4 Pages</li>
+                                <li>Clean, Modern UI</li>
+                                <li>Mobile Friendly Design</li>
+                                <li>Contact Form & Basic SEO</li>
+                                <li>Fast Delivery – 1 to 2 Weeks</li>
+                                <li>2 Revisions Included</li>
+                                <li>Hosting/Domain not included</li>
                             </ul>
                             <a class="btn mt-25 btn-sm circle btn-theme" href="#contact">Order Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+
+                <!-- Laravel Website & Admin Panel -->
+                <div class="col-md-12">
                     <div class="pricing-style-one">
-                        <div class="content" style="width: 100%">
-                            <h4>Poster Design</h4>
+                        <div class="content">
+                            <h4>Laravel Website & Admin Panel</h4>
                             <div class="row py-3">
                                 <div class="col-lg-6">
-                                    <h2><sup>$</sup>50</h2>
+                                    <h2><sup>$</sup>350</h2>
                                 </div>
                                 <div class="col-lg-6">
-                                    <i class="fas fa-image" style="position: initial;float: right"></i>
+                                    <i class="fab fa-laravel" style="position: initial; float: right;"></i>
                                 </div>
                             </div>
-                            <ul style="min-height: 20rem;">
-                                <li>Single-sided design</li>
-                                <li>High-resolution print-ready file</li>
-                                <li>Estimated Timeline: 2 days</li>
-                                <li>2 Revisions Included</li>
+                            <ul>
+                                <li>Up to 8 Pages</li>
+                                <li>Admin Dashboard (CRUD)</li>
+                                <li>User Auth & Roles</li>
+                                <li>Contact Form & Security</li>
+                                <li>Responsive Design</li>
+                                <li>Timeline: 3 to 4 Weeks</li>
+                                <li>3 Revisions Included</li>
+                                <li>Support – 1 Month</li>
+                                <li>Hosting/Domain not included</li>
                             </ul>
-                            <a class="btn mt-25 btn-sm circle btn-theme" href="#contact">Order Now</a>
+                            <a class="btn mt-25 btn-sm circle btn-dark" href="#contact">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SaaS / Custom Web App -->
+                <div class="col-md-12">
+                    <div class="pricing-style-one" style="background: #f3f8ff;">
+                        <div class="content">
+                            <h4>SaaS / Custom Web App</h4>
+                            <div class="row py-3">
+                                <div class="col-lg-6">
+                                    <h2><sup>$</sup>700+</h2>
+                                </div>
+                                <div class="col-lg-6">
+                                    <i class="fas fa-laptop-code" style="position: initial; float: right;"></i>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Tailored Web Solutions</li>
+                                <li>Multi-user & Subscription Logic</li>
+                                <li>API Integrations (Stripe, Maps, etc.)</li>
+                                <li>Reporting & Analytics</li>
+                                <li>Secure Auth, Roles, & Permissions</li>
+                                <li>Timeline: 6 to 10 Weeks</li>
+                                <li>Support – 2 Months</li>
+                                <li>Pricing depends on features</li>
+                            </ul>
+                            <a class="btn mt-25 btn-sm circle btn-dark" href="#contact">Order Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
     <!-- End Pricing Area -->
 
@@ -1603,7 +1972,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <input class="form-control" id="name" name="name" placeholder="Name" type="text">
+                                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
                                             <span class="alert-error"></span>
                                         </div>
                                     </div>
@@ -1611,7 +1980,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <input class="form-control" id="email" name="email" placeholder="Email*" type="email">
+                                            <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
                                             <span class="alert-error"></span>
                                         </div>
                                     </div>
@@ -1654,9 +2023,43 @@
                                     <div class="info">
                                         <p>Email</p>
                                         <h5>
-                                            <a href="mailto:info@validtheme.com">wahajamin2000@gmail.com</a>
+                                            <a href="mailto:wahajamin2000@gmail.com">wahajamin2000@gmail.com</a>
                                             <br> 
-                                            <a href="mailto:support@softar.com">wahajamin17@gmail.com</a>
+                                            <a href="mailto:wahajamin17@gmail.com">wahajamin17@gmail.com</a>
+                                        </h5>
+                                    </div>
+                                </li>
+
+                                <li class="contact-info-list wow fadeInUp" data-wow-delay="500ms">
+                                    <div class="icon">
+                                        <i class="fas fa-headphones-alt"></i>
+                                    </div>
+                                    <div class="info">
+                                        <p>Phone</p>
+                                        <h5>
+                                            <a href="tel:+923131626329">+92 313 1626329</a>
+                                        </h5>
+                                    </div>
+                                </li>
+                                <li class="contact-info-list wow fadeInUp" data-wow-delay="500ms">
+                                    <div class="icon">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <div class="info">
+                                        <p>WhatsApp</p>
+                                        <h5>
+                                            <a href="https://wa.me/923351809446?text=Hi%20Wahaj!%20I'm%20interested%20in%20working%20with%20you.%20Can%20you%20tell%20me%20more%20about%20your%20services?">+92 335 1809446</a>
+                                        </h5>
+                                    </div>
+                                </li>
+                                <li class="contact-info-list wow fadeInUp" data-wow-delay="500ms">
+                                    <div class="icon">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <div class="info">
+                                        <p>LinkedIn</p>
+                                        <h5>
+                                            <a href="https://linkedin.com/in/wahajamin">Wahaj Amin</a>
                                         </h5>
                                     </div>
                                 </li>
@@ -1667,19 +2070,7 @@
                                     <div class="info">
                                         <p>Address</p>
                                         <h5>
-                                            Bait-uk-karim, <br>708/A, Garden Town,<br> Multan
-                                        </h5>
-                                    </div>
-                                </li>
-                                <li class="contact-info-list wow fadeInUp" data-wow-delay="500ms">
-                                    <div class="icon">
-                                        <i class="fas fa-headphones-alt"></i>
-                                    </div>
-                                    <div class="info">
-                                        <p>Phone</p>
-                                        <h5>
-                                            <a href="tel:+4733378901">+92 335 1809446</a>
-                                            <br><a href="tel:+4733378901">+92 313 1626329</a>
+                                            Multan, <br>Punjab Pakistan
                                         </h5>
                                     </div>
                                 </li>
@@ -1698,27 +2089,27 @@
     <footer class="bg-dark text-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <ul class="footer-social">
-                        <li class="facebook">
-                            <a href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="linkedin">
-                            <a href="#">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li class="instagram">
-                            <a href="#">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 text-end">
-                    <p>&copy; 2024 Wahaj. All Rights Reserved</p>
+<!--                <div class="col-lg-6">-->
+<!--                    <ul class="footer-social">-->
+<!--                        <li class="facebook">-->
+<!--                            <a href="#">-->
+<!--                                <i class="fab fa-facebook-f"></i>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="linkedin">-->
+<!--                            <a href="https://linkedin.com/in/wahajamin">-->
+<!--                                <i class="fab fa-linkedin"></i>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="instagram">-->
+<!--                            <a href="https://www.instagram.com/wahaj_amin/">-->
+<!--                                <i class="fab fa-instagram"></i>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+                <div class="col-lg-12 text-center">
+                    <p>&copy; 2025 Wahaj Amin. All Rights Reserved</p>
                 </div>
             </div>
         </div>
@@ -1730,7 +2121,8 @@
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
+<!--    <script src="assets/js/jquery.easing.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/modernizr.custom.13711.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
@@ -1747,6 +2139,84 @@
     <script src="assets/js/typed.js"></script>
     <script src="assets/js/validnavs.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.pricing-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                nav: false,
+                dots: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    576: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                document.querySelectorAll('.pf-item').forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        const modal = document.getElementById('projectSingleModal');
+        modal.addEventListener('show.bs.modal', function (event) {
+            const trigger = event.relatedTarget;
+
+            const title = trigger.getAttribute('data-title');
+            const subTitle = trigger.getAttribute('data-sub-title');
+            const client = trigger.getAttribute('data-client');
+            const type = trigger.getAttribute('data-type');
+            const date = trigger.getAttribute('data-date');
+            const address = trigger.getAttribute('data-address');
+            const description = trigger.getAttribute('data-description');
+            const image = trigger.getAttribute('data-image');
+
+            modal.querySelector('.project-thumb img').src = image;
+            modal.querySelector('h2').textContent = title;
+            modal.querySelector('h5').textContent = subTitle;
+            modal.querySelector('.project-basic-info').innerHTML = `
+            <li>Client <span>${client}</span></li>
+            <li>Project Type <span>${type}</span></li>
+            <li>Date <span>${date}</span></li>
+            <li>Company <span>${address}</span></li>
+        `;
+            modal.querySelector('.top-info p').textContent = description;
+        });
+    </script>
 
 </body>
 </html>
