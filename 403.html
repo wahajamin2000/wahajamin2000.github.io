@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | Wahaj Amin</title>
+    <title>403 - Access Forbidden | Wahaj Amin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -15,8 +15,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ffffff 0%, #d0d0d0 100%);
-            color: #070707;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #ffffff;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -38,24 +38,18 @@
             color: #ff014f;
             text-shadow: 0 0 30px rgba(255, 1, 79, 0.5);
             margin-bottom: 20px;
-            animation: glitch 3s infinite;
+            animation: shake 0.5s ease-in-out infinite;
         }
 
-        @keyframes glitch {
+        @keyframes shake {
             0%, 100% {
-                transform: translate(0);
+                transform: translateX(0);
             }
-            20% {
-                transform: translate(-2px, 2px);
+            25% {
+                transform: translateX(-5px);
             }
-            40% {
-                transform: translate(-2px, -2px);
-            }
-            60% {
-                transform: translate(2px, 2px);
-            }
-            80% {
-                transform: translate(2px, -2px);
+            75% {
+                transform: translateX(5px);
             }
         }
 
@@ -63,15 +57,18 @@
             font-size: 120px;
             color: #ff014f;
             margin-bottom: 30px;
-            animation: float 3s ease-in-out infinite;
+            animation: bounce 2s ease-in-out infinite;
         }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
             }
-            50% {
+            40% {
                 transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
             }
         }
 
@@ -79,12 +76,12 @@
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #000000;
+            color: #0e0e0e;
         }
 
         .error-description {
             font-size: 18px;
-            color: #0a0a0a;
+            color: #0e0e0e;
             margin-bottom: 40px;
             max-width: 600px;
             margin-left: auto;
@@ -104,6 +101,7 @@
             display: inline-block;
             transition: all 0.3s ease;
             box-shadow: 0 5px 20px rgba(255, 1, 79, 0.4);
+            margin: 0 10px 10px 10px;
         }
 
         .btn-home:hover {
@@ -111,6 +109,17 @@
             color: #ffffff;
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(255, 1, 79, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ff014f;
+            border: 2px solid #ff014f;
+        }
+
+        .btn-secondary:hover {
+            background: #ff014f;
+            color: #ffffff;
         }
 
         .btn-home i {
@@ -124,8 +133,19 @@
             width: 100%;
             height: 100%;
             z-index: 1;
-            opacity: 0.1;
+            opacity: 0.05;
             overflow: hidden;
+        }
+
+        .lock-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 400px;
+            color: #ff014f;
+            opacity: 0.03;
+            z-index: 0;
         }
 
         .circle {
@@ -133,7 +153,7 @@
             border-radius: 50%;
             background: #ff014f;
             animation: rise 10s infinite ease-in;
-            opacity: 0.1;
+            opacity: 0.2;
         }
 
         .circle:nth-child(1) {
@@ -190,20 +210,43 @@
             }
         }
 
-        .links {
+        .reason-box {
             margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 1, 79, 0.1);
+            border-radius: 10px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgba(255, 1, 79, 0.2);
         }
 
-        .links a {
-            color: #0e0e0e;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        .links a:hover {
+        .reason-box h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
             color: #ff014f;
+        }
+
+        .reason-box ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+
+        .reason-box li {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #0e0e0e;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .reason-box li:before {
+            content: "•";
+            color: #ff014f;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
 
         @media (max-width: 768px) {
@@ -222,11 +265,18 @@
             .error-icon {
                 font-size: 80px;
             }
+
+            .lock-overlay {
+                font-size: 250px;
+            }
         }
     </style>
 </head>
 <body style="background-image: url(assets/img/shape/banner-1.jpg);">
 <div class="background-animation">
+    <div class="lock-overlay">
+        <i class="fas fa-lock"></i>
+    </div>
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
@@ -236,22 +286,31 @@
 
 <div class="error-container">
     <div class="error-icon">
-        <i class="fas fa-exclamation-triangle"></i>
+        <i class="fas fa-shield-alt"></i>
     </div>
-    <div class="error-code">404</div>
-    <h1 class="error-title">Page Not Found</h1>
+    <div class="error-code">403</div>
+    <h1 class="error-title">Access Forbidden</h1>
     <p class="error-description">
-        Oops! The page you're looking for seems to have wandered off into the digital void.
-        Don't worry though, let's get you back on track.
+        You don't have permission to access this resource. This area is restricted and requires proper authorization.
     </p>
-    <a href="index.html" class="btn-home">
-        <i class="fas fa-home"></i> Back to Home
-    </a>
 
-    <div class="links">
-        <a href="index.html">Home</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="index.html#about">About</a>
+    <div>
+        <a href="index.html" class="btn-home">
+            <i class="fas fa-home"></i> Back to Home
+        </a>
+        <a href="index.html#contact" class="btn-home btn-secondary">
+            <i class="fas fa-envelope"></i> Contact Us
+        </a>
+    </div>
+
+    <div class="reason-box">
+        <h3>Common Reasons:</h3>
+        <ul>
+            <li>You don't have permission to view this page</li>
+            <li>The resource is password protected</li>
+            <li>Your IP address may be blocked</li>
+            <li>You need to log in to access this content</li>
+        </ul>
     </div>
 </div>
 

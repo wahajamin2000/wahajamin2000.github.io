@@ -1,0 +1,23 @@
+# robots.txt for wahajamin.com
+# Upload to: root directory (same level as index.html)
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://wahajamin.com/sitemap.xml
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /backup/
+
+# Disallow file types
+Disallow: /*.sql$
+Disallow: /*.log$
+Disallow: /*.bak$
+
+# Allow all CSS and JS
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/img/

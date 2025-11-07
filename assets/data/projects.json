@@ -1,0 +1,346 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Website With Laravel Admin Panel | Poultry Rates",
+      "description": "A dynamic Poultry Rates Website integrated with a Laravel Admin Panel. This project is a culmination of my expertise in web development and my passion for delivering practical solutions to real-world challenges.",
+      "keyFeatures": [
+        "Real-time Rate Updates: Through the intuitive Laravel Admin Panel I've developed, administrators can effortlessly manage and update poultry rates, ensuring users have access to the latest price information.",
+        "City-wise Price Differentiation: Poultry rates are categorized based on cities, providing users with localized pricing information tailored to their region.",
+        "Dynamic Content Management: The website offers dynamic content management capabilities, allowing administrators to seamlessly add, edit, or remove poultry rate data as market conditions fluctuate.",
+        "Live Searching: To enhance user experience, I've implemented live searching functionality, enabling users to quickly find the poultry rate information they need with ease."
+      ],
+      "technologies": [
+        "Laravel",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "jQuery",
+        "JavaScript",
+        "AJAX",
+        "MySQL",
+        "SMTP"
+      ],
+      "category": "Web Application",
+      "association": null
+    },
+    {
+      "id": 2,
+      "title": "Seamless Delivery Management with Laravel | Pickup4me",
+      "description": "This project revolves around a comprehensive delivery system, facilitating seamless interaction between drivers, customers, and administrators. The system ensures efficient order processing and delivery while maintaining transparency and security.",
+      "keyFeatures": [
+        "User Registration and Verification: Both drivers and customers register on the platform. Administrators verify their details before granting access.",
+        "Order Placement: Customers can place orders from various shops through the app. They specify pickup and delivery addresses along with order details.",
+        "Driver Notification: Drivers within the order's radius receive notifications. Upon acceptance, they proceed to the shop for pickup.",
+        "Payment Processing: Customers make payments through the app, which deducts a commission before transferring the remaining amount to the driver.",
+        "Admin Panel: Administrators access detailed reports, including order and customer reports. They manage driver commissions through a dedicated module."
+      ],
+      "technologies": [
+        "Laravel",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery",
+        "AJAX",
+        "MySQL",
+        "RESTful API",
+        "Google Maps",
+        "Firebase",
+        "Payment Gateways"
+      ],
+      "category": "Web Application",
+      "association": "KNARKZ SOLUTIONS"
+    },
+    {
+      "id": 3,
+      "title": "PRICE TO GO - LARAVEL POWERED ECOMMERCE STORE",
+      "description": "PriceToGo is a fully functional eCommerce platform that I solely developed for a client, offering a complete online shopping experience. The system features a robust admin panel where the store owner can manage products, view and update order details, track deliveries, and handle inventory.",
+      "keyFeatures": [
+        "Complete product management system",
+        "Order tracking and delivery management",
+        "Inventory management",
+        "Responsive design for desktop and mobile",
+        "Smooth and intuitive checkout process"
+      ],
+      "technologies": [
+        "Laravel",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "category": "E-Commerce",
+      "association": null,
+      "duration": "Sep 2024 - Dec 2024"
+    },
+    {
+      "id": 4,
+      "title": "Metal Shop Management Web Application with Mobile App Integration | ScrapThat",
+      "description": "I had the privilege of leading the development of a comprehensive web application for a metal shop specializing in selling and purchasing vintage car spare parts. The project aimed to streamline inventory management, order processing, and user roles for both customers and administrators.",
+      "keyFeatures": [
+        "User Roles and Permissions: Implemented a role-based access control system to differentiate between customer and admin functionalities, ensuring secure access and data privacy.",
+        "Inventory Management: Designed a flexible inventory management module allowing admins to categorize products, set daily prices, and track stock levels across multiple inventories.",
+        "Order Processing: Facilitated seamless order placement, processing, and fulfillment for customers, with automated email notifications for order confirmation and status updates.",
+        "Admin Dashboard: Developed a comprehensive admin dashboard providing insights into customer details, inventory status, and order history, with export functionality for generating reports in Excel format.",
+        "User Verification: Implemented a user verification system enabling admins to verify and approve new user registrations before granting access to the platform.",
+        "Mobile App Integration: Created APIs to enable mobile app users to access essential features, such as product browsing, order placement, and account management."
+      ],
+      "technologies": [
+        "Laravel",
+        "API Development",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "MySQL",
+        "Bootstrap",
+        "AJAX",
+        "SMTP",
+        "Firebase"
+      ],
+      "category": "Web Application",
+      "association": "KNARKZ SOLUTIONS"
+    },
+    {
+      "id": 5,
+      "title": "Laravel-Powered Solution for Dry Cleaning Shops | Welcome Drycleaner",
+      "description": "Developed for a dry cleaning shop, this web application serves as a comprehensive management system for customer data, product inventory, sales, and invoices. Leveraging the Laravel framework, along with HTML, CSS, Bootstrap, JavaScript, jQuery, Ajax, and MySQL, the system provides robust functionality and seamless user experience.",
+      "keyFeatures": [
+        "Customer Management: Store and manage customer data, including contact details and service preferences, for personalized interactions and efficient service delivery.",
+        "Product Inventory: Utilize a dedicated module to add, edit, and manage dry cleaning products, including setting prices and updating inventory levels.",
+        "Sales and Invoices: Generate invoices for customer transactions, detailing services rendered and corresponding charges. Customers can easily select invoices, view details, and print them for their records.",
+        "Reporting: Generate comprehensive reports on sales, invoices, and customer transactions, enabling the shop to analyze performance and make informed business decisions."
+      ],
+      "technologies": [
+        "Laravel",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery",
+        "AJAX",
+        "MySQL",
+        "SMTP"
+      ],
+      "category": "Web Application",
+      "association": null
+    },
+    {
+      "id": 6,
+      "title": "Laravel-Powered Dynamic Report Management System | DPO Property",
+      "description": "This project is a web application developed using the Laravel framework, incorporating HTML, CSS, Bootstrap, JavaScript, jQuery, Ajax, and MySQL. Its primary purpose is to generate dynamic reports, catering to both administrators and customers.",
+      "keyFeatures": [
+        "Dynamic Report Templates: Administrators can dynamically create report templates by adding required elements such as images, audio files, dates, and text fields. This customizable approach allows for tailored reports based on specific requirements.",
+        "Customer Report Generation: Customers utilize the templates created by administrators to generate their reports. They fill in the required data and submit the report, resulting in a professionally formatted document.",
+        "Export Functionality: Reports can be exported in various formats, including Excel and Word, providing flexibility in sharing and further analysis.",
+        "Search and Filter: Users can search and filter reports based on different criteria, enhancing accessibility and usability."
+      ],
+      "technologies": [
+        "Laravel",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery",
+        "AJAX",
+        "MySQL",
+        "API Development"
+      ],
+      "category": "Web Application",
+      "association": "KNARKZ SOLUTIONS"
+    },
+    {
+      "id": 7,
+      "title": "Knarkz Eye - Guard Management System",
+      "description": "Knarkz Eye is a SaaS-based guard management platform developed under my technical leadership at Knarkz Solutions using Laravel and modern web technologies. The system enables businesses to subscribe to security services, enroll and assign registered guards to their sites, and manage operations through real-time tracking, calendar-based scheduling, and detailed reporting.",
+      "keyFeatures": [
+        "Site creation and management",
+        "User role management",
+        "Guard performance monitoring",
+        "Real-time tracking",
+        "Calendar-based scheduling",
+        "Detailed reporting"
+      ],
+      "technologies": [
+        "Laravel",
+        "HTML",
+        "CSS",
+        "API Development",
+        "Google Maps",
+        "Firebase"
+      ],
+      "category": "SaaS Application",
+      "association": "KNARKZ SOLUTIONS"
+    },
+    {
+      "id": 8,
+      "title": "Dynamic Website With Laravel Admin Panel",
+      "description": "This project is a dynamic website with a comprehensive Laravel admin panel, solely developed by me. Utilizing a technology stack comprising Laravel, HTML, CSS, Bootstrap, jQuery, JavaScript, MySQL, and AJAX, this web application embodies efficiency, flexibility, and user-friendliness.",
+      "keyFeatures": [
+        "Dynamic Content Management: The website's content is entirely dynamic, allowing effortless updates, removals, and additions via the intuitive Laravel admin panel. From text and images to multimedia elements, every aspect of the website is customizable.",
+        "Responsive Design: Employing Bootstrap and responsive design principles, the website ensures optimal viewing experiences across various devices and screen sizes, offering seamless access and interaction.",
+        "User Authentication and Authorization: With Laravel's authentication system, the admin panel provides secure access control, enabling effective management of user accounts, permissions, and roles.",
+        "Database Management: Leveraging MySQL for efficient data storage and retrieval, administrators can manage database records, perform CRUD operations, and maintain data integrity effortlessly.",
+        "AJAX Functionality: AJAX integration enhances user experience, enabling asynchronous data exchange between the client and server for faster page loads and seamless interactions."
+      ],
+      "technologies": [
+        "Laravel",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "jQuery",
+        "JavaScript",
+        "MySQL",
+        "AJAX"
+      ],
+      "category": "Web Application",
+      "association": null
+    },
+    {
+      "id": 9,
+      "title": "GYMBUD - GYM & FITNESS MOBILE API SYSTEM",
+      "description": "GymBud is a comprehensive fitness app backend developed by me using Laravel, designed to power both customer and trainer functionalities through mobile applications. I was responsible for building a full suite of RESTful APIs to support features like user registration, personal goal tracking, workout management, and profile customization.",
+      "keyFeatures": [
+        "User registration and profile customization",
+        "Personal goal tracking",
+        "Workout management",
+        "Social features: friend requests and fitness connections",
+        "Real-time chat functionality",
+        "Trainer availability management",
+        "Appointment scheduling system"
+      ],
+      "technologies": [
+        "Laravel",
+        "API Development",
+        "RESTful API"
+      ],
+      "category": "API Development",
+      "association": null,
+      "duration": "Jan 2024 - Feb 2024"
+    },
+    {
+      "id": 10,
+      "title": "Revolutionizing Garment Industry Management: Custom Software Solution with Advanced Analytics",
+      "description": "As a dedicated developer, I'm proud to present a cutting-edge Garments Management System tailored for my client's specific needs. This bespoke solution transforms operations, providing unparalleled insights and efficiency in the garment industry.",
+      "keyFeatures": [
+        "Comprehensive Dashboard",
+        "User Management",
+        "Product Management",
+        "Order Processing",
+        "Inventory Control",
+        "Supplier Management",
+        "Purchase Tracking",
+        "Stock Movement",
+        "Data-driven analytics and reporting"
+      ],
+      "technologies": [
+        "Laravel",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "jQuery",
+        "AJAX",
+        "Chart.js",
+        "MySQL"
+      ],
+      "category": "Web Application",
+      "association": null,
+      "duration": "Jun 2024 - Jul 2024"
+    },
+    {
+      "id": 11,
+      "title": "SIX MAJOR - DIGITAL MARKETING & PPC AGENCY WEBSITE",
+      "description": "SixMajor is a sleek, responsive website built for a digital marketing and PPC-focused eCommerce agency. I developed the website using HTML, CSS, and JavaScript, with a strong focus on clean layout, smooth user interface interactions, and conversion-optimized design.",
+      "keyFeatures": [
+        "Clean and modern layout",
+        "Smooth UI interactions",
+        "Conversion-optimized design",
+        "Services and case studies showcase",
+        "Subtle animations and transitions",
+        "Fully responsive across all devices",
+        "SEO-friendly",
+        "Performance-optimized"
+      ],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery"
+      ],
+      "category": "Website",
+      "association": null,
+      "duration": "Sep 2024"
+    },
+    {
+      "id": 12,
+      "title": "IntroTaps | NFC Digital Business Card System",
+      "description": "IntroTaps is an NFC digital business card platform that lets professionals share profiles with a single tap. With three customizable card types, users can display key details, enable contact saving, and even generate leads. Featuring Super Admin and Customer portals, IntroTaps streamlines digital identity management and fosters meaningful connections effortlessly.",
+      "keyFeatures": [
+        "NFC tap-to-share functionality",
+        "Three customizable card types",
+        "Contact saving feature",
+        "Lead generation capabilities",
+        "Super Admin portal",
+        "Customer portal",
+        "Profile customization"
+      ],
+      "technologies": [
+        "Laravel",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "NFC Technology"
+      ],
+      "category": "SaaS Application",
+      "association": null,
+      "duration": "Mar 2014 - Sep 2024"
+    },
+    {
+      "id": 13,
+      "title": "Arabian Limo - Vehicle Booking & Management System",
+      "description": "This project was developed for a Saudi Arabian transport company to manage vehicle bookings and streamline travel operations. The system includes two web applications (customer and admin portals) and two mobile applications (customer and driver apps).",
+      "keyFeatures": [
+        "Customer registration and booking system",
+        "Email booking confirmations",
+        "Route definition and management",
+        "Vehicle management",
+        "Driver assignment system",
+        "Real-time booking management",
+        "Mobile app API support",
+        "Super admin panel for complete system control"
+      ],
+      "technologies": [
+        "Laravel",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "API Development",
+        "Google Maps"
+      ],
+      "category": "SaaS Application",
+      "association": null,
+      "duration": "Dec 2024 - Feb 2025"
+    },
+    {
+      "id": 14,
+      "title": "HASNAIN CHAUHAN ACADEMY - MARKETING AGENCY WEBSITE",
+      "description": "Hasnain Chauhan Academy is a modern and responsive website developed for a marketing agency to showcase their services and portfolio. I built the entire site from scratch using HTML, CSS, and JavaScript, implementing smooth animations and transitions to enhance the visual appeal and user experience.",
+      "keyFeatures": [
+        "Modern and responsive design",
+        "Smooth animations and transitions",
+        "Services and portfolio showcase",
+        "Fully responsive across all devices and browsers",
+        "Clean and professional design",
+        "Fast development (completed in 3 days)"
+      ],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "category": "Website",
+      "association": null,
+      "duration": "Mar 2025"
+    }
+  ]
+}
