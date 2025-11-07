@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Knarkz Eye",
+    "subtitle": "Guard Management System",
+    "client": "Knarkz Solution Ltd.",
+    "type": "SaaS Development",
+    "date": "-",
+    "category": "development",
+    "categoryLabel": "Development",
+    "image": "assets/img/portfolio/kanrkzeye.jpg",
+    "url": "https://www.linkedin.com/in/wahajamin/details/projects/"
+  },
+  {
+    "title": "Poultry Rates",
+    "subtitle": "Price Tracking Platform",
+    "client": "—",
+    "type": "Website Development",
+    "date": "2024-03-12",
+    "category": "development",
+    "categoryLabel": "Development",
+    "image": "assets/img/portfolio/img (16).jpg",
+    "url": "https://poultryrates.com/"
+  },
+  {
+    "title": "Poster Design Series",
+    "subtitle": "Marketing Visuals",
+    "client": "—",
+    "type": "Graphic Design",
+    "date": "2024",
+    "category": "graphic",
+    "categoryLabel": "Graphic Designing",
+    "image": "assets/img/portfolio/img (2).jpg",
+    "url": "https://www.linkedin.com/in/wahajamin/"
+  }
+]
+
