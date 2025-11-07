@@ -1021,6 +1021,91 @@
         .gallery-view-btn i {
             font-size: 16px;
         }
+
+        /* Back to Top Button Styles */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #ff014f;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 4px 15px rgba(255, 1, 79, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 9999;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: #e6004a;
+            box-shadow: 0 6px 20px rgba(255, 1, 79, 0.6);
+            transform: translateY(-3px);
+        }
+
+        .back-to-top:active {
+            transform: translateY(-1px);
+        }
+
+        /* Animation on scroll */
+        .back-to-top i {
+            animation: bounce-arrow 2s infinite;
+        }
+
+        @keyframes bounce-arrow {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-5px);
+            }
+            60% {
+                transform: translateY(-3px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 18px;
+            }
+        }
+
+        /* Optional: Pulse effect when appearing */
+        .back-to-top.show {
+            animation: pulse-in 0.5s ease;
+        }
+
+        @keyframes pulse-in {
+            0% {
+                transform: scale(0.8) translateY(20px);
+            }
+            50% {
+                transform: scale(1.05) translateY(0);
+            }
+            100% {
+                transform: scale(1) translateY(0);
+            }
+        }
     </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -1032,6 +1117,13 @@
 </head>
 
 <body class="bg-fixed" style="background-image: url(assets/img/shape/banner-1.jpg);">
+
+<!-- Back to Top Button HTML -->
+<!-- Add this code just before the closing </body> tag -->
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
 <!-- Start Preloader
 ============================================= -->
@@ -3627,6 +3719,31 @@
         });
     });
 </script>
+<script>
+    // Back to Top Button Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Show button when user scrolls down 300px
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Smooth scroll to top when button is clicked
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+
 <script src="https://assistant.syverseai.com/widget/personal-assistant-j0z0zvfkfbwapgbq0ellrv1aepvlf3j3/section?signature=b9a6d525b676642957e206609c38023f9bde0da67c2a3a9ca23d1d9f77280819"></script>
 
 </body>
