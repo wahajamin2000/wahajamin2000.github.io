@@ -1351,10 +1351,10 @@
         /* Back to Top Button Styles */
         .back-to-top {
             position: fixed;
-            bottom: 100px;
+            bottom: 130px;
             right: 30px;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background: #ff014f;
             color: #ffffff;
             border: none;
@@ -1432,6 +1432,50 @@
                 transform: scale(1) translateY(0);
             }
         }
+
+        /* Back to Top Button Styles */
+        .email-button {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            background: #0a0a0a;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgb(0, 0, 0, 0.4);
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 9999;
+        }
+
+        .email-button.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .email-button:hover {
+            background: #070707;
+            box-shadow: 0 6px 20px rgb(10, 10, 10);
+            /*transform: translateY(-1px);*/
+        }
+
+        .email-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Animation on scroll */
+        .email-button i {
+            animation: bounce-arrow 2s infinite;
+        }
+
         /* WhatsApp Widget Container */
         .whatsapp-widget {
             position: fixed;
@@ -1442,14 +1486,14 @@
 
         /* WhatsApp Floating Button */
         .whatsapp-button {
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             background: #25D366;
             color: #ffffff;
             border: none;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 32px;
+            font-size: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1467,12 +1511,12 @@
         /* Notification Badge */
         .notification-badge {
             position: absolute;
-            top: -2px;
+            top: -5px;
             right: -2px;
             background: #ff014f;
             color: #ffffff;
-            width: 22px;
-            height: 22px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
             font-size: 12px;
             font-weight: bold;
@@ -1780,6 +1824,13 @@
         <span class="notification-badge">1</span>
     </button>
 </div>
+
+<!-- Back to Top Button HTML -->
+<!-- Add this code just before the closing </body> tag -->
+
+<button id="emailButton" class="email-button" aria-label="Send Email">
+    <i class="fas fa-envelope"></i>
+</button>
 
 
 
@@ -4539,7 +4590,7 @@
 
         // Replace with your WhatsApp number (with country code, no + or spaces)
         // Example: 923001234567 for Pakistan
-        const phoneNumber = 'YOUR_PHONE_NUMBER';
+        const phoneNumber = '923351809446';
 
         // Toggle chat box
         whatsappButton.addEventListener('click', function() {
