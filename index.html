@@ -800,6 +800,201 @@
            PROJECT GALLERY SECTION
         ================================================================= */
 
+        /*.project-gallery-area {*/
+        /*    position: relative;*/
+        /*    overflow: hidden;*/
+        /*}*/
+
+        /*!* Filter Buttons *!*/
+        /*.gallery-filter {*/
+        /*    display: flex;*/
+        /*    !*justify-content: center;*!*/
+        /*    flex-wrap: wrap;*/
+        /*    gap: 15px;*/
+        /*}*/
+
+        /*.gallery-filter-btn {*/
+        /*    background: #ffffff;*/
+        /*    border: 2px solid #e0e0e0;*/
+        /*    color: #333;*/
+        /*    padding: 12px 30px;*/
+        /*    border-radius: 30px;*/
+        /*    font-size: 15px;*/
+        /*    font-weight: 600;*/
+        /*    cursor: pointer;*/
+        /*    transition: all 0.3s ease;*/
+        /*}*/
+
+        /*.gallery-filter-btn:hover,*/
+        /*.gallery-filter-btn.active {*/
+        /*    background: var(--color-primary, #ff014f);*/
+        /*    color: #ffffff;*/
+        /*    border-color: var(--color-primary, #ff014f);*/
+        /*    transform: translateY(-2px);*/
+        /*}*/
+
+        /*!* Gallery Grid *!*/
+        /*.gallery-grid {*/
+        /*    display: flex;*/
+        /*    flex-wrap: wrap;*/
+        /*}*/
+
+        /*.gallery-item {*/
+        /*    margin-bottom: 30px;*/
+        /*    transition: all 0.3s ease;*/
+        /*}*/
+
+        /*.gallery-item.hide {*/
+        /*    display: none;*/
+        /*}*/
+
+        /*!* Default Card Styling (Static State) *!*/
+        /*.gallery-card {*/
+        /*    position: relative;*/
+        /*    overflow: hidden;*/
+        /*    border-radius: 20px;*/
+        /*    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);*/
+        /*    transition: all 0.4s ease;*/
+        /*    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);*/
+        /*    border: 1px solid rgba(0, 0, 0, 0.05);*/
+        /*}*/
+
+        /*!* Add subtle gradient border in default state *!*/
+        /*.gallery-card::after {*/
+        /*    content: '';*/
+        /*    position: absolute;*/
+        /*    top: 0;*/
+        /*    left: 0;*/
+        /*    right: 0;*/
+        /*    bottom: 0;*/
+        /*    border-radius: 20px;*/
+        /*    padding: 2px;*/
+        /*    background: linear-gradient(135deg, #ff014f 0%, #edf5ff 50%, #ff014f 100%);*/
+        /*    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);*/
+        /*    -webkit-mask-composite: xor;*/
+        /*    mask-composite: exclude;*/
+        /*    opacity: 0.3;*/
+        /*    pointer-events: none;*/
+        /*}*/
+
+
+        /*!* Gallery Card *!*/
+        /*!*.gallery-card {*!*/
+        /*!*    position: relative;*!*/
+        /*!*    overflow: hidden;*!*/
+        /*!*    border-radius: 15px;*!*/
+        /*!*    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);*!*/
+        /*!*    transition: all 0.3s ease;*!*/
+        /*!*}*!*/
+
+        /*.gallery-card:hover {*/
+        /*    transform: translateY(-10px);*/
+        /*    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);*/
+        /*}*/
+
+        /*!* Gallery Image *!*/
+        /*.gallery-image {*/
+        /*    position: relative;*/
+        /*    overflow: hidden;*/
+        /*    padding-top: 75%; !* 4:3 Aspect Ratio *!*/
+        /*    background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);*/
+        /*    border-bottom: 3px solid rgba(255, 1, 79, 0.1);*/
+        /*}*/
+
+        /*.gallery-image img {*/
+        /*    position: absolute;*/
+        /*    top: 0;*/
+        /*    left: 0;*/
+        /*    width: 100%;*/
+        /*    height: 100%;*/
+        /*    object-fit: cover;*/
+        /*    transition: all 0.5s ease;*/
+        /*}*/
+
+        /*.gallery-card:hover .gallery-image img {*/
+        /*    transform: scale(1.1);*/
+        /*}*/
+
+        /*!* Gallery Overlay *!*/
+        /*.gallery-overlay {*/
+        /*    position: absolute;*/
+        /*    top: 0;*/
+        /*    left: 0;*/
+        /*    width: 100%;*/
+        /*    height: 100%;*/
+        /*    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%);*/
+        /*    display: flex;*/
+        /*    align-items: flex-end;*/
+        /*    padding: 30px;*/
+        /*    opacity: 0;*/
+        /*    transition: all 0.3s ease;*/
+        /*}*/
+
+        /*.gallery-card:hover .gallery-overlay {*/
+        /*    opacity: 1;*/
+        /*}*/
+
+        /*.overlay-content {*/
+        /*    width: 100%;*/
+        /*}*/
+
+        /*.overlay-content h4 {*/
+        /*    color: #ffffff;*/
+        /*    font-size: 22px;*/
+        /*    font-weight: 700;*/
+        /*    margin-bottom: 8px;*/
+        /*}*/
+
+        /*.overlay-content p {*/
+        /*    color: rgba(255, 255, 255, 0.8);*/
+        /*    font-size: 14px;*/
+        /*    margin-bottom: 15px;*/
+        /*}*/
+
+        /*.gallery-popup {*/
+        /*    display: inline-flex;*/
+        /*    align-items: center;*/
+        /*    justify-content: center;*/
+        /*    width: 45px;*/
+        /*    height: 45px;*/
+        /*    background: var(--color-primary, #ff014f);*/
+        /*    color: #ffffff;*/
+        /*    border-radius: 50%;*/
+        /*    font-size: 18px;*/
+        /*    transition: all 0.3s ease;*/
+        /*}*/
+
+        /*.gallery-popup:hover {*/
+        /*    background: #ffffff;*/
+        /*    color: var(--color-primary, #ff014f);*/
+        /*    transform: scale(1.1);*/
+        /*}*/
+
+        /*!* Responsive *!*/
+        /*@media (max-width: 768px) {*/
+        /*    .gallery-filter {*/
+        /*        gap: 10px;*/
+        /*    }*/
+
+        /*    .gallery-filter-btn {*/
+        /*        padding: 10px 20px;*/
+        /*        font-size: 14px;*/
+        /*    }*/
+
+        /*    .overlay-content h4 {*/
+        /*        font-size: 18px;*/
+        /*    }*/
+
+        /*    .overlay-content p {*/
+        /*        font-size: 13px;*/
+        /*    }*/
+        /*}*/
+
+        /* ==============================================================
+        PROJECT GALLERY SECTION
+     ================================================================= */
+
+
         .project-gallery-area {
             position: relative;
             overflow: hidden;
@@ -848,7 +1043,7 @@
             display: none;
         }
 
-        /* Default Card Styling (Static State) */
+        /* Gallery Card */
         .gallery-card {
             position: relative;
             overflow: hidden;
@@ -857,9 +1052,10 @@
             transition: all 0.4s ease;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             border: 1px solid rgba(0, 0, 0, 0.05);
+            cursor: pointer;
         }
 
-        /* Add subtle gradient border in default state */
+        /* Gradient border effect */
         .gallery-card::after {
             content: '';
             position: absolute;
@@ -875,21 +1071,17 @@
             mask-composite: exclude;
             opacity: 0.3;
             pointer-events: none;
+            transition: opacity 0.3s ease;
         }
 
-
-        /* Gallery Card */
-        /*.gallery-card {*/
-        /*    position: relative;*/
-        /*    overflow: hidden;*/
-        /*    border-radius: 15px;*/
-        /*    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);*/
-        /*    transition: all 0.3s ease;*/
-        /*}*/
+        .gallery-card:hover::after {
+            opacity: 0.8;
+            background: linear-gradient(135deg, #ff014f 0%, #ff6b9d 50%, #ff014f 100%);
+        }
 
         .gallery-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 60px rgba(255, 1, 79, 0.3);
         }
 
         /* Gallery Image */
@@ -898,7 +1090,6 @@
             overflow: hidden;
             padding-top: 75%; /* 4:3 Aspect Ratio */
             background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
-            border-bottom: 3px solid rgba(255, 1, 79, 0.1);
         }
 
         .gallery-image img {
@@ -913,61 +1104,158 @@
 
         .gallery-card:hover .gallery-image img {
             transform: scale(1.1);
+            filter: brightness(0.6);
         }
 
-        /* Gallery Overlay */
+        /* Default Dark/Black Overlay (Always Visible) */
         .gallery-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%);
+            background: linear-gradient( to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.2) 70%, transparent 100% );
+            /*background: linear-gradient(*/
+            /*        to top,*/
+            /*        rgba(0, 0, 0, 0.85) 0%,*/
+            /*        rgba(0, 0, 0, 0.5) 30%,*/
+            /*        rgba(0, 0, 0, 0.2) 70%,*/
+            /*        transparent 100%*/
+            /*);*/
             display: flex;
             align-items: flex-end;
-            padding: 30px;
-            opacity: 0;
-            transition: all 0.3s ease;
+            padding: 25px;
+            transition: all 0.4s ease;
         }
 
+        /* Primary Color Overlay on Hover */
         .gallery-card:hover .gallery-overlay {
-            opacity: 1;
+            background: linear-gradient(
+                    to top,
+                    rgba(164, 7, 56, 0.95) 0%,
+                    rgba(196, 3, 61, 0.7) 40%,
+                    rgba(255, 1, 79, 0.3) 70%,
+                    transparent 100%
+            );
+            padding: 30px;
         }
 
+        /* Overlay Content */
         .overlay-content {
             width: 100%;
+            transform: translateY(0);
+            transition: all 0.4s ease;
         }
 
         .overlay-content h4 {
             color: #ffffff;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-card:hover .overlay-content h4 {
+            font-size: 22px;
             margin-bottom: 8px;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
         }
 
         .overlay-content p {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 13px;
+            margin-bottom: 0;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            opacity: 1;
+        }
+
+        .gallery-card:hover .overlay-content p {
+            color: rgba(255, 255, 255, 1);
             font-size: 14px;
             margin-bottom: 15px;
         }
 
+        /* View Details Button - Hidden by default, shown on hover */
+        .gallery-view-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            color: #ff014f;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .gallery-card:hover .gallery-view-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-view-btn:hover {
+            background: #ff014f;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Alternative: Show icon by default */
         .gallery-popup {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 45px;
-            height: 45px;
-            background: var(--color-primary, #ff014f);
-            color: #ffffff;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #ff014f;
             border-radius: 50%;
-            font-size: 18px;
+            font-size: 16px;
             transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .gallery-card:hover .gallery-popup {
+            opacity: 1;
+            transform: scale(1);
         }
 
         .gallery-popup:hover {
-            background: #ffffff;
-            color: var(--color-primary, #ff014f);
-            transform: scale(1.1);
+            background: #ff014f;
+            color: #ffffff;
+            transform: scale(1.15);
+        }
+
+        /* Category Badge - Default Dark, Hover Primary */
+        .gallery-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            padding: 3px 20px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-card:hover .gallery-badge {
+            background: #ff014f;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 1, 79, 0.5);
         }
 
         /* Responsive */
@@ -985,9 +1273,47 @@
                 font-size: 18px;
             }
 
-            .overlay-content p {
-                font-size: 13px;
+            .gallery-card:hover .overlay-content h4 {
+                font-size: 20px;
             }
+
+            .overlay-content p {
+                font-size: 12px;
+            }
+
+            .gallery-overlay {
+                padding: 20px;
+            }
+
+            .gallery-badge {
+                font-size: 11px;
+                padding: 5px 12px;
+            }
+        }
+
+        /* Shine effect on hover with primary color */
+        .gallery-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                    45deg,
+                    transparent 30%,
+                    rgba(255, 1, 79, 0.3) 50%,
+                    transparent 70%
+            );
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .gallery-card:hover::before {
+            left: 100%;
+            opacity: 1;
         }
     </style>
 
@@ -2087,7 +2413,7 @@
                 <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="dashboard">SaaS</button>
                 <button class="filter-btn" data-filter="website">Websites</button>
-                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+<!--                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>-->
                 <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
                 <button class="filter-btn" data-filter="graphic">Graphic Designing</button>
             </div>
@@ -2110,6 +2436,8 @@
                          data-technologies="Laravel, Bootstrap, jQuery, AJAX, Chart.js, MySQL"
                          data-images="assets/img/portfolio/gallery-saadgarments.png,assets/img/portfolio/saad-garments.png,assets/img/portfolio/saad-garments-1.png,assets/img/portfolio/saad-garments-2.png,assets/img/portfolio/saad-garments-3.png,assets/img/portfolio/saad-garments-4.png">
 
+                        <span class="gallery-badge">SaaS</span>
+
                         <div class="gallery-image">
                             <img src="assets/img/portfolio/gallery-saadgarments.png" alt="Garment Management">
                             <div class="gallery-overlay">
@@ -2125,7 +2453,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item website" data-category="website">
+                <div class="col-lg-4 col-md-6 gallery-item dashboard" data-category="dashboard">
                     <div class="gallery-card"
                          data-bs-toggle="modal"
                          data-bs-target="#projectSingleModal"
@@ -2138,6 +2466,7 @@
                          data-description="Milk Stop is a full-featured dairy management system designed to streamline daily operations for milk shops and dairy retailers. The system includes comprehensive modules for sales tracking, inventory management, employee management, customer accounts with credit tracking, supplier management, and detailed financial reporting. Key features include daily stock monitoring with opening/closing balance tracking, cash flow management per employee, sales reporting with morning/evening shift breakdowns, purchase and expense tracking, automated invoice generation, and visual analytics with charts and graphs. The dashboard provides real-time insights into daily revenue, expenses, total sales, orders, and customer statistics. Built with a modern, intuitive interface ensuring easy navigation and efficient workflow management for dairy business owners."
                          data-technologies="PHP, Laravel, MySQL, Bootstrap, JavaScript, Chart.js"
                          data-images="assets/img/portfolio/gallery-milkstop.png,assets/img/portfolio/milkstop (1).png,assets/img/portfolio/milkstop (3).png,assets/img/portfolio/milkstop (2).png,assets/img/portfolio/milkstop (4).png">
+                        <span class="gallery-badge">SaaS</span>
 
                         <div class="gallery-image">
                             <img src="assets/img/portfolio/gallery-milkstop.png" alt="Milk Stop Management System">
@@ -2168,6 +2497,7 @@
                          data-description="Seekode is a modern software development agency website showcasing comprehensive development services. The platform highlights their expertise in web development, mobile applications, custom software solutions, and IT consulting services. Features a clean, professional design with detailed service offerings, portfolio showcase, and client testimonials. Built with responsive design principles to ensure optimal viewing experience across all devices and platforms."
                          data-technologies="HTML, CSS, JavaScript, Bootstrap"
                          data-images="assets/img/portfolio/gallery-seekode.png">
+                        <span class="gallery-badge">Website</span>
 
                         <div class="gallery-image">
                             <img src="assets/img/portfolio/gallery-seekode.png" alt="Seekode Agency">
@@ -2198,6 +2528,7 @@
                          data-description="IntroTaps is an NFC digital business card platform that lets professionals share profiles with a single tap. Features three customizable card types, contact saving functionality, lead generation capabilities, Super Admin portal, Customer portal, and comprehensive profile customization options."
                          data-technologies="Laravel, HTML, CSS, JavaScript, NFC Technology"
                          data-images="assets/img/portfolio/gallery-introtaps.png,assets/img/portfolio/introtaps.png,assets/img/portfolio/introtaps-1.png,assets/img/portfolio/introtaps-2.png,assets/img/portfolio/introtaps-3.png">
+                        <span class="gallery-badge">SaaS</span>
 
                         <div class="gallery-image">
                             <img src="assets/img/portfolio/gallery-introtaps.png" alt="IntroTaps">
@@ -2215,7 +2546,7 @@
                 </div>
 
                 <!-- Gallery Item 4: Arabian Limo -->
-                <div class="col-lg-4 col-md-6 gallery-item mobile" data-category="mobile">
+                <div class="col-lg-4 col-md-6 gallery-item dashboard" data-category="dashboard">
                     <div class="gallery-card"
                          data-bs-toggle="modal"
                          data-bs-target="#projectSingleModal"
@@ -2227,7 +2558,8 @@
                          data-address="Saudi Arabia"
                          data-description="Developed for a Saudi Arabian transport company to manage vehicle bookings and streamline travel operations. System includes two web applications (customer and admin portals) and two mobile applications (customer and driver apps). Features customer registration and booking, email confirmations, route and vehicle management, driver assignment, real-time booking management."
                          data-technologies="Laravel, HTML, CSS, JavaScript, API Development, Google Maps"
-                         data-images="assets/img/portfolio/gallery-arabianlimo.png,assets/img/portfolio/arabian-limo (2).png,assets/img/portfolio/arabian-limo (1).png,assets/img/portfolio/arabian-limo (3).png,assets/img/portfolio/arabian-limo (4).png">
+                         data-images="assets/img/portfolio/gallery-arabianlimo.png,assets/img/portfolio/arabian (2).png,assets/img/portfolio/arabian (1).png,assets/img/portfolio/arabian (3).png,assets/img/portfolio/arabian (4).png">
+                        <span class="gallery-badge">SaaS</span>
 
                         <div class="gallery-image">
                             <img src="assets/img/portfolio/gallery-arabianlimo.png" alt="Arabian Limo">
@@ -2275,7 +2607,7 @@
 <!--                </div>-->
 
                 <!-- Gallery Item 6: Poultry Rates -->
-                <div class="col-lg-4 col-md-6 gallery-item website" data-category="website">
+                <div class="col-lg-4 col-md-6 gallery-item dashboard" data-category="dashboard">
                     <div class="gallery-card"
                          data-bs-toggle="modal"
                          data-bs-target="#projectSingleModal"
@@ -2288,6 +2620,7 @@
                          data-description="A dynamic Poultry Rates Website integrated with a Laravel Admin Panel. Real-time rate updates through intuitive admin panel, city-wise price differentiation providing localized pricing information, dynamic content management for market fluctuations, and live searching functionality for enhanced user experience."
                          data-technologies="Laravel, HTML, CSS, Bootstrap, jQuery, JavaScript, AJAX, MySQL"
                          data-images="assets/img/portfolio/poultry (1).png,assets/img/portfolio/poultry (2).png,assets/img/portfolio/poultry (3).png,assets/img/portfolio/poultry (4).png">
+                        <span class="gallery-badge">SaaS</span>
 
                         <div class="gallery-image">
                             <img src="assets/img/portfolio/gallery-poultryrates.png" alt="Poultry Rates">
@@ -2348,6 +2681,7 @@
                          data-description="PriceToGo is a fully functional eCommerce platform that I solely developed for a client, offering a complete online shopping experience. The system features a robust admin panel where the store owner can manage products, view and update order details, track deliveries, and handle inventory."
                          data-technologies="Laravel, HTML, CSS, JavaScript"
                          data-images="assets/img/portfolio/gallery-price.png">
+                        <span class="gallery-badge">E-commerce</span>
 
                         <div class="gallery-image">
                             <img src="assets/img/portfolio/gallery-price.png" alt="PriceToGo">
@@ -2378,6 +2712,7 @@
                          data-description="Hasnain Chauhan Academy is a modern and responsive website developed for a marketing agency to showcase their services and portfolio. Built entire site from scratch using HTML, CSS, and JavaScript with smooth animations and transitions. Features modern and responsive design, services and portfolio showcase. Project completed within just 3 days."
                          data-technologies="HTML, CSS, JavaScript"
                          data-images="assets/img/portfolio/gallery-hca.png">
+                        <span class="gallery-badge">Website</span>
 
                         <div class="gallery-image">
                             <img src="assets/img/portfolio/gallery-hca.png" alt="Hasnain Chauhan Academy">
@@ -2408,6 +2743,7 @@
                          data-description="SixMajor is a sleek, responsive website built for a digital marketing and PPC-focused eCommerce agency. Developed using HTML, CSS, and JavaScript with strong focus on clean layout, smooth UI interactions, conversion-optimized design, services and case studies showcase, subtle animations and transitions, fully responsive across all devices, SEO-friendly, and performance-optimized."
                          data-technologies="HTML, CSS, JavaScript, jQuery"
                          data-images="assets/img/portfolio/gallery-sixmajor.png">
+                        <span class="gallery-badge">Website</span>
 
                         <div class="gallery-image">
                             <img src="assets/img/portfolio/gallery-sixmajor.png" alt="Six Major">
@@ -2425,65 +2761,170 @@
                 </div>
 
                 <!-- Graphic Design Items -->
+                <!-- Graphic Design Items -->
+
+                <!-- Gallery Item 1: Study Shed -->
                 <div class="col-lg-4 col-md-6 gallery-item graphic" data-category="graphic">
-                    <div class="gallery-card">
+                    <div class="gallery-card"
+                         data-bs-toggle="modal"
+                         data-bs-target="#projectSingleModal"
+                         data-title="Study Shed - Brand Identity & Campaign Design"
+                         data-sub-title="Complete branding for education consultancy"
+                         data-client="Study Shed Consultancy"
+                         data-type="Graphic Design"
+                         data-date="2023 - 2024"
+                         data-address="Pakistan"
+                         data-description="Comprehensive brand identity and marketing campaign design for Study Shed, a leading education consultancy that helps students pursue their dreams of studying abroad. Created complete visual identity including logo design, brand guidelines, marketing collateral, social media graphics, admission campaign designs, student testimonial graphics, university partnership materials, brochures and flyers, event banners and posters, and digital advertisements. The design approach focuses on trust, professionalism, and aspirational messaging to connect with students and parents looking for reliable study abroad guidance."
+                         data-technologies="Adobe Illustrator, Adobe Photoshop, Figma, Canva"
+                         data-images="assets/img/portfolio/studyshed%20(1).png,assets/img/portfolio/studyshed (2).jpg,assets/img/portfolio/studyshed (3).jpg,assets/img/portfolio/studyshed (4).jpg,assets/img/portfolio/studyshed (5).jpg,assets/img/portfolio/studyshed (6).jpg,assets/img/portfolio/studyshed (1).jpg,assets/img/portfolio/studyshed (7).jpg">
+                        <span class="gallery-badge">Branding</span>
+
                         <div class="gallery-image">
-                            <img src="assets/img/portfolio/img (1).png" alt="Poster Design">
+                            <img src="assets/img/portfolio/studyshed%20(1).png" alt="Study Shed Design">
                             <div class="gallery-overlay">
                                 <div class="overlay-content">
-                                    <h4>Poster Design</h4>
-                                    <p>Graphic Designing</p>
+                                    <h4>Study Shed</h4>
+                                    <p>Education Consultancy Branding</p>
                                     <span class="gallery-view-btn">
-                                    <i class="fas fa-search-plus"></i>
-                                </span>
+                        <i class="fas fa-eye"></i> View Details
+                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Gallery Item 2: Rising Youth Expo -->
                 <div class="col-lg-4 col-md-6 gallery-item graphic" data-category="graphic">
-                    <div class="gallery-card">
+                    <div class="gallery-card"
+                         data-bs-toggle="modal"
+                         data-bs-target="#projectSingleModal"
+                         data-title="Rising Youth Expo Multan - Campaign Management"
+                         data-sub-title="Complete event branding and social media management"
+                         data-client="Rising Youth Expo"
+                         data-type="Graphic Design & Social Media"
+                         data-date="2023 - 2024"
+                         data-address="Multan, Pakistan"
+                         data-description="End-to-end campaign design and social media management for Rising Youth Expo Multan, a premier youth-focused event. Responsibilities included complete event branding and identity, social media content strategy and creation, pre-event promotional campaigns, event day coverage graphics, post-event highlight designs, speaker and sponsor graphics, countdown posts and stories, Instagram and Facebook ad creatives, event banners and signage, ticket promotion designs, and engagement-driven content. Successfully managed all digital touchpoints creating a cohesive visual experience that significantly boosted event attendance and engagement across all social media platforms."
+                         data-technologies="Adobe Photoshop, Adobe Illustrator, Canva, Premiere Pro"
+                         data-images="assets/img/portfolio/rising-youth (6).jpg,assets/img/portfolio/rising-youth (2).jpg,assets/img/portfolio/rising-youth (3).jpg,assets/img/portfolio/rising-youth (4).jpg,assets/img/portfolio/rising-youth (7).jpg,assets/img/portfolio/rising-youth (8).jpg,assets/img/portfolio/rising-youth (9).jpg,assets/img/portfolio/rising-youth (10).jpg,assets/img/portfolio/rising-youth (5).jpg,assets/img/portfolio/rising-youth (1).jpg">
+                        <span class="gallery-badge">Social Media</span>
+
                         <div class="gallery-image">
-                            <img src="assets/img/portfolio/img (2).jpg" alt="Poster Design">
+                            <img src="assets/img/portfolio/rising-youth (6).jpg" alt="Rising Youth Expo Design">
                             <div class="gallery-overlay">
                                 <div class="overlay-content">
-                                    <h4>Poster Design</h4>
-                                    <p>Graphic Designing</p>
+                                    <h4>Rising Youth Expo</h4>
+                                    <p>Event Campaign & Social Media</p>
                                     <span class="gallery-view-btn">
-                                    <i class="fas fa-search-plus"></i>
-                                </span>
+                        <i class="fas fa-eye"></i> View Details
+                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Gallery Item 3: Islami Jamiat-e-Talaba -->
                 <div class="col-lg-4 col-md-6 gallery-item graphic" data-category="graphic">
-                    <div class="gallery-card">
+                    <div class="gallery-card"
+                         data-bs-toggle="modal"
+                         data-bs-target="#projectSingleModal"
+                         data-title="Islami Jamiat-e-Talaba - Social Media Management"
+                         data-sub-title="Complete digital presence and campaign design"
+                         data-client="Islami Jamiat-e-Talaba (IJT)"
+                         data-type="Graphic Design & Social Media"
+                         data-date="2022 - Present"
+                         data-address="Pakistan"
+                         data-description="Comprehensive social media management and content creation for Islami Jamiat-e-Talaba, a prominent student organization. Managed all social media accounts including Facebook, Instagram, Twitter, and YouTube. Responsibilities include complete social media strategy and content calendar, daily post designs for organizational activities, campaign graphics for student movements, event coverage and promotional materials, protest and rally graphics, educational content design, motivational and Islamic content posts, Instagram Reels and TikTok video editing, stories and carousel designs, infographics and awareness posts, membership drive campaigns, and election campaign materials. Created a consistent visual identity that resonates with the student community while maintaining the organization's core values and messaging."
+                         data-technologies="Adobe Photoshop, Adobe Illustrator, Premiere Pro, After Effects, Canva"
+                         data-images="assets/img/portfolio/ijt (1).jpg,assets/img/portfolio/ijt (2).jpg,assets/img/portfolio/ijt (3).jpg,assets/img/portfolio/ijt (4).jpg,assets/img/portfolio/ijt (5).jpg,assets/img/portfolio/ijt (6).jpg,assets/img/portfolio/ijt (7).jpg,assets/img/portfolio/ijt (8).jpg,assets/img/portfolio/ijt (9).jpg">
+                        <span class="gallery-badge">Social Media</span>
+
                         <div class="gallery-image">
-                            <img src="assets/img/portfolio/img (3).jpg" alt="Poster Design">
+                            <img src="assets/img/portfolio/ijt (1).jpg" alt="IJT Social Media Design">
                             <div class="gallery-overlay">
                                 <div class="overlay-content">
-                                    <h4>Poster Design</h4>
-                                    <p>Graphic Designing</p>
+                                    <h4>Islami Jamiat-e-Talaba</h4>
+                                    <p>Social Media & Campaigns</p>
                                     <span class="gallery-view-btn">
-                                    <i class="fas fa-search-plus"></i>
-                                </span>
+                        <i class="fas fa-eye"></i> View Details
+                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Gallery Item 5: Bazm-e-Paigham -->
+                <div class="col-lg-4 col-md-6 gallery-item graphic" data-category="graphic">
+                    <div class="gallery-card"
+                         data-bs-toggle="modal"
+                         data-bs-target="#projectSingleModal"
+                         data-title="Bazm-e-Paigham - School Society Branding"
+                         data-sub-title="Social media management and event design for student society"
+                         data-client="Bazm-e-Paigham Society"
+                         data-type="Graphic Design & Social Media"
+                         data-date="2022 - 2024"
+                         data-address="Pakistan"
+                         data-description="Complete social media management and design services for Bazm-e-Paigham, a vibrant school student society focused on cultural, educational, and extracurricular activities. Managed all digital platforms and created engaging content that resonates with the student community. Services included social media account management (Facebook, Instagram, WhatsApp), event poster and banner designs, activity announcement graphics, competition and quiz promotional materials, debate and speech event designs, educational seminar graphics, cultural event branding and collateral, student achievement celebration posts, society meeting announcements, membership drive campaigns, annual function and ceremony designs, Instagram stories and highlights, motivational and Islamic content for students, and weekly activity schedules. Created a youthful and energetic visual identity that connects with school students while maintaining educational values and promoting positive student engagement."
+                         data-technologies="Adobe Photoshop, Adobe Illustrator, Canva, CorelDRAW"
+                         data-images="assets/img/portfolio/bazm (1).jpg,assets/img/portfolio/bazm (2).jpg,assets/img/portfolio/bazm (3).jpg,assets/img/portfolio/bazm (4).jpg,assets/img/portfolio/bazm (5).jpg,assets/img/portfolio/bazm (6).jpg">
+                        <span class="gallery-badge">Social Media</span>
+
+                        <div class="gallery-image">
+                            <img src="assets/img/portfolio/bazm (1).jpg" alt="Bazm-e-Paigham Design">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h4>Bazm-e-Paigham Society</h4>
+                                    <p>Student Society Branding</p>
+                                    <span class="gallery-view-btn">
+                        <i class="fas fa-eye"></i> View Details
+                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4: Creative Design Portfolio -->
+                <div class="col-lg-4 col-md-6 gallery-item graphic" data-category="graphic">
+                    <div class="gallery-card"
+                         data-bs-toggle="modal"
+                         data-bs-target="#projectSingleModal"
+                         data-title="Creative Design Portfolio - Diverse Projects"
+                         data-sub-title="Collection of posters, banners, and social media designs"
+                         data-client="Various Clients"
+                         data-type="Graphic Design"
+                         data-date="2022 - 2024"
+                         data-address="Remote & Local"
+                         data-description="A diverse collection of creative design works showcasing versatility across different industries and design styles. This portfolio includes promotional posters for events and businesses, social media posts and ad creatives, banner designs for websites and events, flyer and brochure designs, product mockups and packaging concepts, business card and stationery designs, Instagram and Facebook ad campaigns, motivational and quote graphics, logo design and brand identity concepts, infographics and data visualization, and festival and seasonal greeting designs. Each project demonstrates unique creative approaches tailored to specific client needs, from minimalist corporate designs to vibrant event promotions. The collection showcases proficiency in typography, color theory, layout design, and visual storytelling across various mediums and platforms."
+                         data-technologies="Adobe Photoshop, Adobe Illustrator, Figma, CorelDRAW, Canva"
+                         data-images="assets/img/portfolio/random (3).jpg,assets/img/portfolio/random (2).jpg,assets/img/portfolio/random (1).jpg,assets/img/portfolio/random (4).jpg,assets/img/portfolio/random (5).jpg,assets/img/portfolio/random (6).jpg,assets/img/portfolio/random (7).jpg">
+                        <span class="gallery-badge">Creative</span>
+
+                        <div class="gallery-image">
+                            <img src="assets/img/portfolio/random (3).jpg" alt="Creative Design Portfolio">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h4>Creative Design Works</h4>
+                                    <p>Posters, Banners & Social Media</p>
+                                    <span class="gallery-view-btn">
+                        <i class="fas fa-eye"></i> View Details
+                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Load More Button -->
-            <div class="row mt-50">
-                <div class="col-lg-12 text-center">
-                    <a href="#contact" class="btn btn-theme btn-md circle">View All Projects</a>
-                </div>
-            </div>
+<!--            <div class="row mt-50">-->
+<!--                <div class="col-lg-12 text-center">-->
+<!--                    <a href="#contact" class="btn btn-theme btn-md circle">View All Projects</a>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
 </div>
 
